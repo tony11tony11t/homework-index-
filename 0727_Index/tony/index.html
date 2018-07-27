@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <script>
+            $(function(){
+                var index_div_header_height=$(".index-div-header").height();
+                var index_div_header_width=$(".index-div-header").width();
+                $(".index-img-heart_number").attr("height",index_div_header_height*0.4);
+                $(".index-img-heart_number").attr("width",index_div_header_width*0.22);
+                $(".index-img-heart").attr("height",index_div_header_height*0.4);
+                $(".index-div-name").css("height",index_div_header_height*0.5);
+                $(".index-div-name").css("width",index_div_header_width*0.3);
+                $(".index-img-email").attr("height",index_div_header_height*0.55);
+                $(".index-img-setting").attr("height",index_div_header_height*0.55);
+                
+                var index_div_footer_height=$(".index-div-footer").height();
+                var index_div_footer_width=$(".index-div-footer").width();
+                
+                $(".index-img-bar_item").attr("height",index_div_footer_width*0.15);
+                
+                $(".index-img-bar_home").attr("height",index_div_footer_width*0.23);
+            })
+        </script>
+        
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-family: "微軟正黑體","Arial";
+                font-weight: 900;
+            }
+            .index-div-header{
+                position: relative;
+                background-image: url("images/main/main/up02.png");
+                background-size: 100% 90%;
+                background-repeat: no-repeat;
+                height: 100%;
+                top:-3%;
+            }
+            .index-div-footer{
+                position: relative;
+                background-image: url("images/main/main/foot.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                text-align: center;
+                
+            }
+            .index-div-left{
+                float: left;
+                position: relative;
+                background-image: url("images/main/main/up01.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 32%;
+                left: -1%;
+            }
+            .index-div-right{
+                float: right;
+                position: relative;
+                background-image: url("images/main/main/up03.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 32%;
+                left: 1%;
+            }
+            .index-div-name{
+                float: left;
+                position: relative;
+                background-image: url("images/main/main/heart02.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                
+                padding: 0% 1% 0% 1%;
+                
+                
+                top:20%;
+                left: 2%;
+                
+                text-align: center;
+            }
+            .index-div-name>span{
+               position: relative;
+                top: 22%;
+                font-size: 11pt;
+                
+            }
+            .index-img-heart{
+                position: relative;
+                z-index: 2;
+                top:25%;
+                left: 10%;
+            }
+            .index-img-heart_number{
+                float: right;
+                position: relative;
+                background-image: url("images/main/main/mochi-25.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 30%;
+                top:33%;
+                width: 60%;
+                left: -18%;
+                z-index: 1;
+                text-align: right;
+                
+            }
+            .index-img-heart_number>span{
+                position: relative;
+                top:5%;
+                left:-10%;
+                font-size: 11pt;
+            }
+            .index-img-email{
+                float: left;
+                position: relative;
+                top:20%;
+                left:20%;
+            }
+            .index-img-setting{
+                float: left;
+                position: relative;
+                top:20%;
+                left:22%;
+            }
+            .index-div-bar_item{
+                display: inline-block;
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                vertical-align: middle;
+                
+            }
+            .index-div-bar_item>p{
+                font-size: 8pt;
+            }
+            .index-img-bar_home{
+                padding-top: 15%;
+            }
+            .index-img-bar_item{
+                padding-top:20%; 
+            }
+            
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .index-page-index{
+                position: relative;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <div data-role="page" id="index-page-index">
+            <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">  
+                <div class="index-div-header">
+                    <div class="index-div-left">
+                        <img src="images/main/main/heart01.png" class="index-img-heart">
+                        <div class="index-img-heart_number"><span class="index-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="index-div-name"><span class="index-span-game_name">MMMMMMM</span></div>
+                    <div class="index-div-right">
+                        <img src="images/main/main/main%20(4).png" class="index-img-email">
+                        <img src="images/main/main/main%20(5).png" class="index-img-setting">
+                    </div>
+                </div>
+            </div>
+            <div  data-role="content">
+                
+            </div>
+            
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="index-div-footer">
+                    <div class="index-div-bar_item"><img src="images/main/main/mochi.png" class="index-img-bar_item"><p>Mochi</p></div>
+                    <div class="index-div-bar_item"><img src="images/main/main/mission.png" class="index-img-bar_item"><p>任務</p></div>
+                    <div class="index-div-bar_item"><img src="images/main/main/home.png" class="index-img-bar_home"></div>
+                    <div class="index-div-bar_item"><img src="images/main/main/store.png" class="index-img-bar_item"><p>商店</p></div>
+                    <div class="index-div-bar_item"><img src="images/main/main/else.png" class="index-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
