@@ -3,112 +3,110 @@
          
          <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" type="text/css" href="home.css" />
+          <link rel="stylesheet" type="text/css" href="mail.css" />
          <script src="jquery-1.11.3.min.js"></script>
              <script src="home.js"></script>
-        <style>
-            .mail{
-                border-radius: 5px;
-              
+     <script>
+       function createPrompt()
+{
+    var divSp = document.createElement("div");    //對話框
+    var newMask = document.createElement("div");  //背部界面
+    var btnSub = document.createElement("button"); //彈出按钮
+    var btn = document.createElement("button");
+    var inner;
 
-                margin-left: 9px;
-                width:381px;
-                height:420px;
-               border:1px black solid;
-            }
-            .from{
-                float:left;
-                width:40px;
-               margin-left: 20px;
-                margin-right: 0px;
-            }
-            .name{
-                float:left;
-                width:280px;
-                 border:1px black solid;
-                 border-radius: 5px;
-                height: 20px;
-                margin-top: 16px;
-                margin-left: 5px;
-                margin-right: 20px;
-            }
-            .content{
-               
-                width:40px;
-               margin-left: 20px;
-                margin-right: 0px;
-            } 
-            .mission{
-                margin-left: 25px;
-                width:331px;
-                height:250px;
-                 border:1px black solid;
-                 border-radius: 5px;
-            }
-            .mission_content{
-                margin-top: 10px;
-                width:301px;
-                margin-left: 14px;
-                height:40px;
-                  border:1px black solid;
-                 border-radius: 5px;
-            }
-            .delete{
-                float:left;
-                margin-top: 10px;
-                margin-left: 25px;
-                margin-right: 229px;
-                width:50px;
-                height:25px;
-                  border:1px black solid;
-                 border-radius: 5px;
-               text-align: center;
-               line-height:25px;
-              
-            }
-            .close{
-                  margin-top: 10px;
-                  float:left;
-                    width:50px;
-                height:25px;
-                  border:1px black solid;
-                 border-radius: 5px;
-                text-align: center;
-               line-height:25px;
-              
-            }
-            .recive{
-              
-                float:left;
-                margin-right: 0px;
-                  width:100px;
-                height:40px;
-            margin-left: 80px;
-                   border:1px black solid;
-                 border-radius: 5px;
-                border-bottom: 0px;
-                text-align: center;
-               line-height:40px;
-            }
-            .Nrecive{
-                float:right;
-             margin-top: 10px;
-              margin-right: 118px;
-                  width:100px;
-                height:30px;
-                 border:1px black solid;
-                 border-radius: 5px;
-                border-bottom: 0px;
-                border-left: 0px;
-                 text-align: center;
-               line-height:30px;
-                
-            }
-            .accept{
-                height:40px;
-            }
-            }
-        </style>
+    // 弹出对话框中要呈现的页面元素布局等html代码
+    inner = '<div class="fieldset" style="height:300px  background:white font-size:500px">';
+  
+
+    inner += ' <p style="text-align: center">接收任務 </p>';
+   
+ 
+    inner += '</div>';
+
+    //   遮罩等
+    if ( !document.getElementById("mask") && 1)
+    {      
+        //mask div    
+        newMask.id = "mask";
+        newMask.style.position = "absolute";
+        newMask.style.zIndex = "1";
+        newMask.style.width = "100%";
+        newMask.style.height = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight) + 100 + "px";
+        newMask.style.top = "0px";
+        newMask.style.left = "0px";
+        newMask.style.background = "gray";
+       
+        newMask.style.opacity = "0.5";
+        document.body.appendChild(newMask);      
+    }
+     //整個div
+    if ( !document.getElementById("promptID"))
+    {
+        //new div (prompt)
+        divSp.setAttribute("id", "promptID");
+        divSp.style.position = "absolute";
+        divSp.style.padding = "8px";
+        divSp.style.width = "10px";
+        divSp.style.marginTop = "150px";
+        divSp.style.marginLeft = "35px";
+        divSp.style.borderRadius= "10px";
+        divSp.style.height = "10px";
+        divSp.style.zIndex = "2"; 
+        divSp.style.top =50+"px";
+        divSp.style.left = 20+"px";
+        divSp.style.border = "1px dotted #576999";
+        divSp.style.backgroundColor = "white";
+        divSp.innerHTML = inner;
+        document.body.appendChild(divSp);
+        openDiv();
+    } 
+    //it can be operated in android
+   
+
+    if ( !document.getElementById("btnSubID"))
+    {
+        btnSub.onclick="location.href='a.html';"
+        btnSub.setAttribute("id", "btnSubID");
+        btnSub.setAttribute("class", "btn-subtle");
+        btnSub.style.height = "20px";
+         btnSub.style.width = "60px";
+        btnSub.style.position = "absolute";
+        btnSub.style.top = "80%";
+        btnSub.style.left = "25%"; 
+        btnSub.textContent = "否";
+        
+        document.getElementById("promptID").appendChild(btnSub);
+    }    
+    if ( !document.getElementById("btnID"))
+    {
+        btn.setAttribute("id", "btnID");
+        btn.setAttribute("class", "btn-subtle");
+        btn.style.height = "20px";
+         btn.style.width = "60px";
+        btn.style.position = "absolute";
+        btn.style.top = "80%";
+        btn.style.left = "50%"; 
+        btn.textContent = "是";
+        btn.onclick="location.href='a.html';"
+        
+        document.getElementById("promptID").appendChild(btn);
+    }    
+}
+
+// 對話框寬高度
+function openDiv()
+{
+    var divPrompt = document.getElementById("promptID");
+    
+    var viewWidth =280;
+    var viewHeight = 200;
+
+    divPrompt.style.width=viewWidth + "px";  
+    divPrompt.style.height=viewHeight + "px";
+}
+//
+        </script>>
     </head>
     <body style="margin:0px;">
         <div class="home">
@@ -129,7 +127,11 @@
                 <div class="name"></div>
                 <p class="content">內容</p>
                 <div class="mission">
-                    <div class="mission_content"></div>
+                    <div class="mission_content" onclick=createPrompt();></div>
+                      <div class="mission_content" ></div>
+                      <div class="mission_content" ></div>
+                      <div class="mission_content" ></div>
+                      <div class="mission_content" ></div>
                 </div>
                 <div class="delete">刪除</div>
                 <div class="close">關閉</div>
