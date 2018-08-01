@@ -1,0 +1,353 @@
+			*{
+                margin: 0px;
+                padding: 0px;
+                font-family: "微軟正黑體","Arial";
+                font-weight: 900;
+				background-color: transparent;
+            }
+/*---------------------------------------------------------------------------------------------------
+//---------------bar--------------/
+---------------------------------------------------------------------------------------------------	*/
+            .bar-div-header{
+                position: relative;
+                background-image: url("images/bar_icon/up02.png");
+                background-size: 100% 90%;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+            .bar-div-footer{
+                position: relative;
+                background-image: url("images/bar_icon/foot.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                text-align: center;
+                
+            }
+            .bar-div-left{
+                float: left;
+                position: relative;
+                background-image: url("images/bar_icon/up01.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 32%;
+                left: -1%;
+            }
+            .bar-div-right{
+                float: right;
+                position: relative;
+                background-image: url("images/bar_icon/up03.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 32%;
+                left: 1%;
+            }
+            .bar-div-name{
+                float: left;
+                position: relative;
+                background-image: url("images/bar_icon/heart02.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                
+                padding: 0% 1% 0% 1%;
+                
+                width: 30%;
+				height: 40%;
+                top:25%;
+                left: 2%;
+                
+                text-align: center;
+            }
+            .bar-div-name>span{
+               position: relative;
+                top: 22%;
+                font-size: 11pt;
+				
+                
+            }
+            .bar-img-heart{
+                position: relative;
+                z-index: 2;
+                top:25%;
+                left: 10%;
+				height: 40%;
+            }
+            .bar-img-heart_number{
+                float: right;
+                position: relative;
+                background-image: url("images/bar_icon/mochi-25.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 30%;
+                top:33%;
+                width: 60%;
+                left: -18%;
+                z-index: 1;
+                text-align: right;
+                
+            }
+            .bar-img-heart_number>span{
+                position: relative;
+                top:5%;
+                left:-10%;
+                font-size: 11pt;
+            }
+            .bar-img-email{
+                float: left;
+                position: relative;
+                top:20%;
+                left:20%;
+				height: 55%
+            }
+            .bar-img-setting{
+                float: left;
+                position: relative;
+                top:20%;
+                left:22%;
+				height: 55%
+            }
+            .bar-div-bar_item{
+                display: inline-block;
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                vertical-align: middle;
+				cursor: pointer;
+				width: 15%;
+                
+            }
+            .bar-div-bar_home{
+                display: inline-block;
+                vertical-align: middle;
+				cursor: pointer;
+				width: 22%;
+            }
+            .bar-div-bar_item>p{
+                font-size: 8pt;
+            }
+            .bar-img-bar_home{
+                padding-top: 10px;
+				height:80%;
+            }
+			.bar-img-bar_item{
+                padding-top:10px;
+				height:60%;
+				
+            }
+			.bar-div-second_bar{
+                
+                position: relative;
+                background-image: url("images/bar_icon/whitebar.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height:16%;
+                text-align: center;
+				
+                width: 100%;
+                /*動畫屬性，應要為85%*/
+                top:100%;
+                
+            }
+            .second_bar_item_mission{
+                display: none;
+                margin-left: 10%;
+                margin-right: 10%;
+				width:20%;
+            }
+            .second_bar_item_other{
+                display: none;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+				 width:15%;
+            }
+            .bar-div-second_bar_item{ 
+                margin-top: 6pt;
+            }
+			.bar-img-second_bar_item{
+				height:60%;
+			}
+            .bar-div-second_bar_item>p{
+                font-size: 7pt;
+            }
+/*---------------------------------------------------------------------------------------------------
+//---------------Loading--------------/
+---------------------------------------------------------------------------------------------------	*/
+			.loading_content {
+				position: relative;
+				height: 100%;
+			}
+
+
+			#loading-page-loading{
+				background-image: url(images/loading/loading-21.png);
+				position: relative;
+			}
+		
+			#loading-img-icon{
+				width: 70%;
+				margin-top: 30%;
+				
+			}
+			.loading-div-content{
+				
+				position: relative;
+				height: 100%;
+				text-align: center;
+				
+			}
+			#loading-p-txt{
+				
+				
+				
+				font-size: 30pt;
+				color: white;
+				font-weight: 900;
+				
+			}
+			#loading-a-start{
+				
+				
+				font-size: 30pt;
+				
+				color: white;
+				font-weight: 900;
+				display: none;
+			}
+			#loading-span-dash{
+				animation-name: light;
+				animation-duration: 0.4s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;
+			}
+			@keyframes light{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			@keyframes shake{
+				0%{
+					margin-left: 2%;
+				}
+				25%{
+					margin-left:  0%;
+				}
+				75%{
+					margin-right: 2%;
+				}
+				100%{
+					margin-right: 0%;
+				}
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------Login&Register--------------/
+---------------------------------------------------------------------------------------------------	*/
+			#login-page-login{
+				position: relative;
+			}
+			#login-page-registered{
+				position: relative;
+			}
+			.login_content{
+				position: relative;
+				height:100%;
+				padding: 0px;
+				background-image: url(images/loading/loading-21.png);
+			}
+			.login-div-window{
+				
+				background-color:#EA5514;
+				position: relative;
+				width: 90%;
+				border-radius: 10px;
+				left:5%;
+				top:20%;
+			}
+			#login_window{
+				height: 45%;
+			}
+			#registered_window{
+				height: 55%;
+			}
+			.login-div-content{
+				background-color:#FCEBA2;
+				position: relative;
+				width: 95%;
+				height: 80%;
+				
+				left:2.5%;
+				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+			.login-div-title{
+				position: relative;
+				height: 14.5%;
+				text-align: center;
+				color: white;
+				font-size: 20pt;
+				top: 1.5%;
+			}
+			.login-span-txt{
+				color:#EA5514;
+				display: inline-block;
+				margin-left: 6%;
+				margin-right: 6%;
+				font-size: 15pt;
+			}
+			.login-form-login{
+				position: relative;
+				top: 10%;
+			}
+			.ui-input-text{
+				width: 70%;
+				display: inline-block;
+				border: solid #EA5514 1px;
+				background-color: white;
+				
+			}
+			.login-btn-login{
+				display: inline-block;
+				width: 25%;
+				height: 65%;
+				position: relative;
+				margin-left:2.5%; 
+				margin-right:2.5%;
+				padding-top:15px;
+				background-color: #EA5514;
+				color: white;
+				font-size: 12pt;
+				border-radius: 10px;
+				text-decoration: none;
+			}
+		
+			.login-btn-bar{
+				position: relative;
+				text-align: center;
+				top: 20%;
+				height: 20%;
+			}
+			.result{
+				text-align: center;
+				position: relative;
+				top:15%;
+				
+				color: red;
+			}
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+

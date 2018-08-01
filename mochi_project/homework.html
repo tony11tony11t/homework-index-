@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+		
+		
+        <style>
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+
+        </style>
+	
+	
+    </head>
+    <body>
+		<!--Loading畫面-->
+		<div data-role="page" id="loading-page-loading">	
+			<div data-role="content" class="loading_content">
+				<div class="loading-div-content">
+					<div id="loading-div-icon"><img id="loading-img-icon" src="images/loading/loading-19.png"></div>
+					<p id="loading-p-txt">Loading</p>		
+				</div>
+			</div>
+		</div>
+		<!--Index-->
+        <div data-role="page" id="index-page-index">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+            <div  data-role="content" class="content" >
+                <div class="index-div-content">
+					<div class="index-div-main">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-03.png">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-04.png">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-05.png">
+						<img class="index-img-mochi" src="images/index/mochi_style/mochi.png">
+					</div>
+					
+					
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+                </div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+		<script src="bar_style.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				//Loading動畫
+				var loading=setInterval(function(){
+					$this=$("#loading-p-txt");
+					var now_string_loading=$this.html();
+					
+					if(now_string_loading!="Loading...")
+					$this.html(now_string_loading+".");
+					else
+					$this.html("Loading");
+				},500);
+				
+				//prefetch頁面
+				$.mobile.loadPage("#index-page-index");
+			
+				window.onload=function(){
+					clearInterval(loading);
+					var span_dash="<span id='loading-span-dash'>_</span>"
+					$("#loading-p-txt").html(span_dash);
+					
+					//打字機動畫(4秒結束)
+					setTimeout(function(){$("#loading-p-txt").html("M"+span_dash);},1500);
+					setTimeout(function(){$("#loading-p-txt").html("Mo"+span_dash);},1650);
+					setTimeout(function(){$("#loading-p-txt").html("Moc"+span_dash);},1800);
+					setTimeout(function(){$("#loading-p-txt").html("Moch"+span_dash);},1950);
+					setTimeout(function(){$("#loading-p-txt").html("Mochi"+span_dash);},2100);
+					setTimeout(function(){
+						$("#loading-img-icon").css({animation:"shake 0.1s infinite alternate"});
+					},2300);
+					setTimeout(function(){
+						$("#loading-img-icon").css({animation:"null"});
+					},3000);
+					setTimeout(function(){
+						$.mobile.navigate("#index-page-index",{transition: "pop"});
+					},4000);
+					//---------END
+	
+				}
+				
+				//second_bar_animation
+                var SecondBar_value={
+					IsSecondBarVisible:false,
+					SecondBarIsWhat:null
+				};
+                $(".bar-div-bar_item").on("click",SecondBar_value,animate_bar);
+				//---------END
+
+			});
+			
+		</script>
+		
+    </body>
+</html>
