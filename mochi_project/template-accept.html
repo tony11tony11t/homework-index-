@@ -517,12 +517,13 @@
         document.body.appendChild(newMask);      
     }
             
+            
      if ( !document.getElementById("promptID"))
     {
         //new div (prompt)
         divSp.setAttribute("id", "promptID");
         divSp.style.position = "absolute";
-      
+      divSp.style.backgroundColor="#FFCE00";
         divSp.style.width = "10px";
         divSp.style.marginTop = "150px";
       
@@ -532,7 +533,7 @@
         divSp.style.top =50+"px";
         divSp.style.left = viewWidth*0.02+"px";
         divSp.style.border = "1px dotted #576999";
-        divSp.style.backgroundColor = "white";
+        
         divSp.innerHTML = inner;
         document.body.appendChild(divSp);
         openDiv();
@@ -540,19 +541,23 @@
                 }
                 
             
-       
+      /*  background-image: url(emial_setting/email_setting27.png);
+               background-size: 100% 100%;
+                background-repeat: no-repeat; */
      
        function createPrompt()
 {
     // 弹出对话框中要呈现的页面元素布局等html代码
-    inner = '<div class="fieldset" style="height:150px;  background:white; ">';
-    inner += ' <p style="text-align: center;font-size:20px;font-family:Microsoft JhengHei; ">接收任務 </p>';
-    inner += ' <p style="text-align: center;font-family:Microsoft JhengHei;font-size:14px;">您將會有6小時將指定挑戰求任務完成!逾時將會被扣除6點愛心</p>';
-     inner+='<div style="  border:1px black solid; width:10%;text-align: center ;margin-top:70px;margin-left:45%;"><a href="template.html" data-ajax="false" style="text-decoration:none;color:black;font-family:Microsoft JhengHei;">確認</a></div>'
+    inner = '<div class="fieldset" style="height:150px;  background:#FFCE00; ">';
+    inner += ' <p style="text-align: center;font-size:24pt;font-family:Microsoft JhengHei; ">接收任務 </p>';
+    inner += ' <p style="text-align: center;color: white;font-family:Microsoft JhengHei;font-size:16pt;">您將會有6小時將指定挑戰求任務完成!逾時將會被扣除6點愛心</p>';
+     inner+='<div style="float:left;height:25%;;width:20%;margin-top:70px;margin-left:25%;margin-right:17%l;background-image:url(emial_setting/email_setting27.png);background-size: 100% 100%;"><a href="template.html" data-ajax="false" style="text-decoration:none;color:black;font-family:Microsoft JhengHei;"></a></div>'
+    inner+='<div style="float:left;height:25%;;width:20%;margin-top:70px;margin-left:5%;background-image:url(emial_setting/email_setting26.png);background-size: 100% 100%;"><a href="template.html" data-ajax="false" style="text-decoration:none;color:black;font-family:Microsoft JhengHei;"></a></div>'
    /*  inner+='<button onclick="location.href=''" ></button>'*/
     inner += '</div>';
     mask();
     
+
 }var pages = ['index-page-index', 'index-page-2'];            //頁面的名稱(id)
 $(document).on('pageinit', '#index-page-index', function () {
 
