@@ -6,6 +6,7 @@
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<script src="jquery.min.js"  type="text/javascript"></script>  
 		<script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+		<script src="mochi_function.js" type="text/javascript"></script>
 		
 		<script>
 			$(function(){
@@ -13,59 +14,10 @@
 				$(".login-btn-login").on("click",function(){
 					 $(".result").html("");
 				});
-				$("#login").on("click",function(){
-					var username=$("#username").val();
-					var password=$("#password").val();
-					$.ajax({
-                        url:"http://192.168.1.105/mochi/Check_LoginData.php",
-                        type:"POST",
-                        datatype:"JSON",
-                        data:{"username":username,"password":password},
-                        success(msg){
-                            var result=JSON.parse(msg);
-							console.log(result.result);
-                            if(result.result=="SUCCESS"){
-                                $(".result").html("登入成功");
-							}
-                            else
-                                $(".result").html("帳號或密碼錯誤");
-                        },
-                        error(msg){
-                            alert(msg);
-                        }
-                    });
-				});
+				$("#login").on("click",login_click);
 				
 				//註冊帳號
-				$("#registered").on("click",function(){
-					var username=$("#rgt_username").val();
-					var password=$("#rgt_password").val();
-					var name=$("#rgt_name").val();
-					
-					if(username==""||password==""||name==""){
-						 $(".result").html("請檢查是否有空白");
-					}
-					else{
-					$.ajax({
-                        url:"http://192.168.1.105/mochi/memberdata/Insert_Member.php",
-                        type:"POST",
-                        datatype:"JSON",
-                        data:{"username":username,"password":password,"nickname":name},
-                        success(msg){
-                            var result=JSON.parse(msg);
-							console.log(result.result);
-                            if(result.result=="SUCCESS"){
-                                $(".result").html("新增會員成功");
-							} 
-							else
-								$(".result").html("此信箱已經申請過囉");
-                        }, 
-                        error(msg){
-                            alert(msg);
-                        }
-                    });
-					}
-				});
+				$("#registered").on("click",registered_click);
 				
 				
 				
@@ -114,6 +66,16 @@
 						<a class="login-btn-login register_btn" id="registered">註冊</a>
 						</div>
 					</div>	
+				</div>
+			</div>
+		</div>
+		
+		<!--Loading畫面-->
+		<div data-role="page" id="loading-page-loading">	
+			<div data-role="content" class="loading_content">
+				<div class="loading-div-content">
+					<div id="loading-div-icon"><img id="loading-img-icon" src="images/loading/loading-19.png"></div>
+					<p id="loading-p-txt">Loading</p>		
 				</div>
 			</div>
 		</div>

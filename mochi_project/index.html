@@ -1,0 +1,590 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+		
+		
+        <style>
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+
+        </style>
+	
+	
+    </head>
+    <body>
+		<!--Loading畫面-->
+		<div data-role="page" id="loading-page-loading">	
+			<div data-role="content" class="loading_content">
+				<div class="loading-div-content">
+					<div id="loading-div-icon"><img id="loading-img-icon" src="images/loading/log_in-08-10.png"></div>
+					<p id="loading-p-txt">Loading</p>		
+				</div>
+			</div>
+		</div>
+		<!--Login畫面-->
+		<div data-role="page" id="login-page-login" data-theme="f">	
+			<div data-role="content" class="login_content">
+				<div class="login-div-window" id="login_window">
+					<div class="login-div-title">登入</div>
+					<div class="login-div-content">
+						<form class="login-form-login">
+							
+							<span class="login-span-txt">信箱</span><input type="text" class="login-txt-field login_field" id="username" data-role="none"/>
+							<span class="login-span-txt">密碼</span><input type="text" class="login-txt-field login_field" id="password" data-role="none"/>
+						</form>
+						<p class="result"></p>
+						<div class="login-btn-bar">
+						<a class="login-btn-login" ><img src="images/loading/log_in-08-03.png"></a>
+						<a class="login-btn-login" href="#login-page-registered" data-transition="flip" ><img src="images/loading/log_in-08-05.png"></a>
+						<a class="login-btn-login" id="login"><img src="images/loading/log_in-08-04.png"></a>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!--Registered畫面-->
+		<div data-role="page" id="login-page-registered" data-theme="f">	
+			<div data-role="content" class="login_content">
+				<div class="login-div-window" id="registered_window">
+					<div class="login-div-title">註冊</div>
+					<div class="login-div-content">
+						<form class="login-form-login">
+							
+							<span class="login-span-txt">信箱</span><input type="text" class="login-txt-field rgt_field" id="rgt_username" data-role="none"/>
+							<span class="login-span-txt">密碼</span><input type="text" class="login-txt-field rgt_field" id="rgt_password" data-role="none"/>
+							<span class="login-span-txt">暱稱</span><input type="text" class="login-txt-field rgt_field" id="rgt_name" data-role="none"/>
+						</form>
+						<p class="result"></p>
+						<div class="login-btn-bar">
+						<a class="login-btn-login register_btn" href="#login-page-login" data-transition="flip" ><img src="images/loading/log_in-08-08.png"></a>
+						<a class="login-btn-login register_btn" id="registered"><img src="images/loading/log_in-08-09.png"></a>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!--遊戲說明畫面-->
+		<div data-role="page" id="instruction-page-instruction" data-theme="f">	
+			<div data-role="content" class="instruction_content">
+				<div class="instruction-div-img_content">
+				<image src="images/introduce/introduce-001.png" class="instruction-img-instruction" data-page="1"/>
+				<image src="images/introduce/introduce-002.png" class="instruction-img-instruction" data-page="2"/>
+				<image src="images/introduce/introduce-003.png" class="instruction-img-instruction" data-page="3"/>
+				<image src="images/introduce/introduce-004.png" class="instruction-img-instruction" data-page="4"/>
+				<image src="images/introduce/introduce-005.png" class="instruction-img-instruction" data-page="5"/>
+				<image src="images/introduce/introduce-006.png" class="instruction-img-instruction" data-page="6"/>
+				</div>
+				<div class="instruction_footer">
+					<span class="instruction-span-btn" id="btn_back">BACK</span>
+					<div class="instruction-div-page">
+					<div class="instruction-div-page_dot now_page"  data-page="1"><image src="images/bar_icon/page_circle_now.png"/></div>
+					<div class="instruction-div-page_dot"  data-page="2"><image src="images/bar_icon/page_circle.png"/></div>
+					<div class="instruction-div-page_dot"  data-page="3"><image src="images/bar_icon/page_circle.png"/></div>
+					<div class="instruction-div-page_dot"  data-page="4"><image src="images/bar_icon/page_circle.png"/></div>
+					<div class="instruction-div-page_dot"  data-page="5"><image src="images/bar_icon/page_circle.png"/></div>
+					<div class="instruction-div-page_dot"  data-page="6"><image src="images/bar_icon/page_circle.png"/></div>
+					</div>
+					<span class="instruction-span-btn" id="btn_next">NEXT</span>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!--Index-->
+        <div data-role="page" id="index-page-index">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony"></span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name"></span></div>
+                    <div class="bar-div-right">
+						<img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+            <div  data-role="content" class="content" >
+                <div class="index-div-content">
+					<div class="index-div-main">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-03.png">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-04.png">
+						<img class="index-img-bg_star" src="images/index/background_001/bg01-05.png">
+						<img class="index-img-mochi" src="images/index/mochi_style/mochi.png">
+					</div>
+					
+					<!--設定的對話框-->
+					<div class="setting-div-page">
+					<div class="setting-div-dialog">
+						<div class="setting-div-title"><span>設 定</span><img src="images/emial_setting/email_setting07.png"></div>
+						<div class="setting-div-music"><span>音效</span><img id="Sound" data-switch="on" src="images/emial_setting/email_setting04.png"></div>
+						<div class="setting-div-music"><span>音樂</span><img id="Music" data-switch="on"  src="images/emial_setting/email_setting04.png"></div>
+						<div class="settiing-div-btn">
+						<img src="images/emial_setting/email_setting02.png" >
+						<img src="images/emial_setting/email_setting02.png" class="setting-img-btn_enter">
+						</div>
+					</div>
+					</div>
+					<div class="all-div-mask"></div>
+				</div>
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<a href="#mission-page-mission"><div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div></a>
+
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_friends"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_collections"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<a href="#instruction-page-instruction"><div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_introduce"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div></a>
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_contantus"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+                
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+					<a href="#index-page-index"><div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div></a>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+		
+		
+		<!--Mission(任務列表)-->
+		<div data-role="page" id="mission-page-mission">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_money">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+					
+                </div>
+			  
+            </div>
+            <div  data-role="content" class="content" >   	
+				<!--設定的對話框-->
+					<div class="setting-div-page">
+					<div class="setting-div-dialog">
+						<div class="setting-div-title"><span>設 定</span><img src="images/emial_setting/email_setting07.png"></div>
+						<div class="setting-div-music"><span>音效</span><img id="Sound" data-switch="on" src="images/emial_setting/email_setting04.png"></div>
+						<div class="setting-div-music"><span>音樂</span><img id="Music" data-switch="on"  src="images/emial_setting/email_setting04.png"></div>
+						<div class="settiing-div-btn">
+						<img src="images/emial_setting/email_setting02.png" >
+						<img src="images/emial_setting/email_setting02.png" class="setting-img-btn_enter">
+						</div>
+					</div>
+					<div class="all-div-mask"></div>
+					</div>
+				<div class="mission-div-page">
+					<div class="mission-div-title">
+						<h3>任務列表</h3>
+					</div>
+					<div class="mission-div-menu">
+						<img src="images/mission/missionC-03.png" id="mission_announce">
+						<img src="images/mission/missionC-02.png" id="mission_execute">
+					</div>
+					<div class="mission-div-list">	
+					</div>
+				</div>
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<a href="#mission-page-mission"><div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div></a>
+
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_friends"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_collections"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<a href="#instruction-page-instruction"><div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_introduce"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div></a>
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_contantus"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+					<a href="#index-page-index"><div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div></a>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+		
+		
+		<!--mission(任務內容)-->
+		<div data-role="page" id="mission-page-infro">	
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMy</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+			
+            <div  data-role="content" class="content">  
+			<!--設定的對話框-->
+					<div class="setting-div-page">
+					<div class="setting-div-dialog">
+						<div class="setting-div-title"><span>設 定</span><img src="images/emial_setting/email_setting07.png"></div>
+						<div class="setting-div-music"><span>音效</span><img id="Sound" data-switch="on" src="images/emial_setting/email_setting04.png"></div>
+						<div class="setting-div-music"><span>音樂</span><img id="Music" data-switch="on"  src="images/emial_setting/email_setting04.png"></div>
+						<div class="settiing-div-btn">
+						<img src="images/emial_setting/email_setting02.png" >
+						<img src="images/emial_setting/email_setting02.png" class="setting-img-btn_enter">
+						</div>
+					</div>
+					
+					</div>
+				<div class="mission-div-infro_page" data-id="0" data-getscore="0">
+					<img src="images/mission/missionC-53.png" class="mission-img-logo">
+					<a href="#mission-page-mission"><img src="images/mission/missionC-05.png" class="mission-img-close"></a>
+					<div class="mission-div-detail">
+							<div><span>任務類型</span><img src="images/mission/missionC-09.png" id="mission_type"><br/></div>
+							<div><span>任務性質</span><img src="images/mission/missionC-17.png" id="mission_pub_or_pri"><br/></div>
+							<div><span>任務進度</span><img src="images/mission/missionC-39.png" id="mission_state"><br/></div>
+					</div>
+					<div class="mission-div-from"><span>發至</span><p>尚未有人接收任務哦!!</p></div>
+					<div class="mission-div-question"><span>任務</span><p>無任務內容</p></div>
+					
+					
+					<!--尚未完成的球------------------------------------------------------------------------>
+					<div class="mission-div mission-div-no"><hr/><span>目前尚未有人完成任務!</span></div>
+					
+					<!--已完成的球-------------------------------------------------------------------------->
+					<div class="mission-div-getanswer mission-div">
+						<div class="mission-div-text_answer"><span>回答</span><img src="images/mission/missionZ-17.png" class="mission-btn-dia_answer"></div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" id="message_text_finish" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--要執行的球(解惑)-------------------------------------------------------------------->
+					<div class="mission-div-execute_text mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<div class="mission-div-text">
+									<textarea data-role="none" id="answer" class="mission-textarea-answer"></textarea>
+							</div>
+						</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" id="message_text" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--要執行的球(挑戰)-------------------------------------------------------------------->
+					<div class="mission-div-execute_change mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<img src="images/mission/missionC-21.png" id="take_pic">
+							<img src="images/mission/missionC-21.png" id="see_pic" class="mission-img-dia_seepic">
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" class="mission-textarea-message_text" id="message_action"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--執行者等待挑戰評論---------------------------------------------------------------------->
+					<div class="mission-div-execute_waitscore_change mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<img src="images/mission/missionC-21.png" id="wait_see_pic" class="mission-img-dia_seepic">
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+					</div>
+					<!--執行者等待解惑評論---------------------------------------------------------------------->
+					<div class="mission-div-execute_waitscore_text mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-answer"></textarea>
+							</div>
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+					</div>
+					<!--完成扭蛋------------------------------------------------------------------------------>
+					<div class="mission-div-finish mission-div">
+						<div class="mission-div-finish_btn">
+								<img src="images/mission/missionZ-17.png" class="mission-btn-dia_answer">
+						</div>
+
+						<div class="mission-div-score" id="myscore">
+							<p>我的<br/>回饋</p>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_mypoints">
+							<textarea data-role="none" readonly="readonly" ></textarea>
+							</div>
+						</div>
+						<div class="mission-div-score" id="getscore">
+							<p>對方<br/>回饋</p>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_getpoints">
+							<textarea data-role="none" readonly="readonly"></textarea>
+							</div>
+						</div>	
+					</div>
+				</div>		
+				<!--小視窗區---------------------------------------------------------------------------->
+				<!--小視窗區---------------------------------------------------------------------------->
+				<!--小視窗區---------------------------------------------------------------------------->
+					
+				<!--看圖片小視窗-->	
+					<div class="mission-div-dialog_seepic">
+						<div class="mission-dialog-title"><span>觀看任務內容</span><img src="images/emial_setting/email_setting07.png" class="dialog_cancle"></div>
+						<div class="mission-dialog-answer">
+							<div class="mission-dialog-content mission-dialog-pic_content"><img id="answer_pic"></div>
+						</div>
+					</div>
+				<!--看解答小視窗-->
+					<div class="mission-div-dialog_seeanswer">
+						<div class="mission-dialog-title"><span>觀看任務內容</span><img src="images/emial_setting/email_setting07.png" class="dialog_cancle"></div>
+						<div class="mission-dialog-answer">
+							<div class="mission-dialog-content"><p id="dialog_answer"></p></div>
+						</div>
+					</div>
+				<!--確定任務評分小視窗-->
+					<div class="mission-div-dialog_checkscore">
+						<div class="mission-dialog-answer">
+							<p>送出後任務評分無法修改<br/>請問是否確定送出評分?</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+						<img src="images/mission/missionC-31.png" id="dia-btn_cancle">
+						<img src="images/mission/missionC-32.png" id="dia-btn_enter">
+						</div>
+					</div>
+				<!--確定評分送出小視窗-->
+					<div class="mission-div-dialog_ok">
+						<div class="mission-dialog-answer">
+							<p>送出成功了喔~</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+						<a href="#mission-page-mission"><img src="images/mission/missionC-32.png" id="dia-btn_ok"></a>
+						</div>
+					</div>
+				<!--發布者評分送出小視窗-->
+					<div class="mission-div-dialog_getscore">
+						<div class="mission-dialog-answer">
+							<p>評分結果與回饋已送出<br/>已為您增加愛心囉!</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+							<a href="#mission-page-infro"><img src="images/mission/missionC-32.png" id="dia-btn_getok"></a>
+						</div>
+					</div>
+				<!--執行者評分送出小視窗-->
+					<div class="mission-div-dialog_executorgetscore">
+						<div class="mission-dialog-answer">
+							<p>評分結果與回饋已送達<br/>已為您增加愛心囉!<br/>PS.扭蛋已加入收藏囉!</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+							<a href="#mission-page-mission"><img src="images/mission/missionC-32.png" id="dia-btn_getok"></a>
+						</div>
+					</div>
+				<!--小視窗出現時後面的mask-->	
+					<div class="all-div-mask"></div>
+				
+					
+				
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<a href="#mission-page-mission"><div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div></a>
+
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_friends"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_collections"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<a href="#instruction-page-instruction"><div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_introduce"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div></a>
+						<div class="bar-div-second_bar_item second_bar_item_other" id="second_bar_contantus"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+			</div>
+           <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+					<a href="#index-page-index"><div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div></a>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+			</div>
+		
+		
+		<script src="mochi_function.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				var wh=$(window).height();
+				
+				
+				//window.localStorage.clear();
+				//檢查是否可以登入
+				check_and_login();
+				
+				//prefetch頁面
+				$.mobile.loadPage("#index-page-index");
+				$.mobile.loadPage("#mission-page-mission");
+				
+				//second_bar_animation
+                var SecondBar_value={
+					IsSecondBarVisible:false,
+					SecondBarIsWhat:null
+				};
+                $(".bar-div-bar_item").on("click",SecondBar_value,animate_bar);
+						
+				//登入畫面-------------------------------------------------------------------------------
+				//檢查登入資訊以及顯示結果
+				$(".login-btn-login").on("click",function(){
+					 $(".result").html("");
+				});
+				$("#login").on("click",login_click);
+				
+				//註冊帳號
+				$("#registered").on("click",registered_click);
+				//--------------------------------------------------------------------------------------
+				
+				//當鍵盤出現的時候，登入視窗往上移
+				window.addEventListener("resize",function(){login_resize_window(wh)});
+				
+				//遊戲說明的下方按鈕
+				introduce_page();
+				
+				$(window).on("hashchange",function(){
+					if(location.hash=="#index-page-index"){
+						
+						SecondBar_value.IsSecondBarVisible=false;
+						console.log((SecondBar_value.IsSecondBarVisible));
+						$(".bar-div-second_bar").animate({
+                                top:(SecondBar_value.IsSecondBarVisible)?"-15%":"0%"
+                        },300);
+					}
+				});
+				
+				//設定事件
+				setting_event();
+				
+				//showannounce
+				$(".second_bar_item_mission").on("click",showannounce);
+				$("#mission_announce").on("click",showannounce);
+				$("#mission_execute").on("click",showexecute);
+				//mission
+				mission_event();
+				
+			});
+
+		</script>
+		
+    </body>
+</html>

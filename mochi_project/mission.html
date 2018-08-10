@@ -1,0 +1,388 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <style>
+			
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+
+        </style>
+    </head>
+    <body>
+		
+		<!--如果要新增PAGE，把底下這個模板再複製一份就好-->
+        <div data-role="page" id="mission-page-mission">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_money">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+					
+                </div>
+			  
+            </div>
+            <div  data-role="content" class="content" >   			
+				<div class="mission-div-page">
+					<div class="mission-div-title">
+						<h3>任務列表</h3>
+					</div>
+					<div class="mission-div-menu">
+						<img src="images/mission/missionC-03.png" id="mission_announce">
+						<img src="images/mission/missionC-02.png" id="mission_execute">
+					</div>
+					<div class="mission-div-list">	
+					</div>
+				</div>
+						
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+		
+		
+		<!--如果要新增PAGE，把底下這個模板再複製一份就好-->
+        <div data-role="page" id="mission-page-infro">	
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMy</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+			
+            <div  data-role="content" class="content">  
+			
+				<div class="mission-div-infro_page" data-id="0" data-getscore="0">
+					<img src="images/mission/missionC-53.png" class="mission-img-logo">
+					<a href="#mission-page-mission"><img src="images/mission/missionC-05.png" class="mission-img-close"></a>
+					<div class="mission-div-detail">
+							<div><span>任務類型</span><img src="images/mission/missionC-09.png" id="mission_type"><br/></div>
+							<div><span>任務性質</span><img src="images/mission/missionC-17.png" id="mission_pub_or_pri"><br/></div>
+							<div><span>任務進度</span><img src="images/mission/missionC-39.png" id="mission_state"><br/></div>
+					</div>
+					<div class="mission-div-from"><span>發至</span><p>尚未有人接收任務哦!!</p></div>
+					<div class="mission-div-question"><span>任務</span><p>無任務內容</p></div>
+					
+					
+					<!--尚未完成的球------------------------------------------------------------------------>
+					<div class="mission-div mission-div-no"><hr/><span>目前尚未有人完成任務!</span></div>
+					
+					<!--已完成的球-------------------------------------------------------------------------->
+					<div class="mission-div-getanswer mission-div">
+						<div class="mission-div-text_answer"><span>回答</span><img src="images/mission/missionC-32.png" class="mission-btn-dia_answer"></div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" id="message_text_finish" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--要執行的球(解惑)-------------------------------------------------------------------->
+					<div class="mission-div-execute_text mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<div class="mission-div-text">
+									<textarea data-role="none" id="answer" class="mission-textarea-answer"></textarea>
+							</div>
+						</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" id="message_text" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--要執行的球(挑戰)-------------------------------------------------------------------->
+					<div class="mission-div-execute_change mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<img src="images/mission/missionC-21.png" id="take_pic">
+							<img src="images/mission/missionC-21.png" id="see_pic" class="mission-img-dia_seepic">
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" class="mission-textarea-message_text" id="message_action"></textarea>
+								</div>
+							</div>
+							<div class="mission-img-btn_submit">
+							<img src="images/mission/missionC-26.png" class="btn_save">
+							<img src="images/mission/missionC-27.png" class="btn_enter">
+							</div>
+					</div>
+					<!--執行者等待挑戰評論---------------------------------------------------------------------->
+					<div class="mission-div-execute_waitscore_change mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<img src="images/mission/missionC-21.png" id="wait_see_pic" class="mission-img-dia_seepic">
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+					</div>
+					<!--執行者等待解惑評論---------------------------------------------------------------------->
+					<div class="mission-div-execute_waitscore_text mission-div">
+						<div class="mission-div-text_answer"><span>回答</span>
+							<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-answer"></textarea>
+							</div>
+							</div>
+						<div class="mission-div-score"><span>評分</span>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_points">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_points">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_points">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_points">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_points">
+							</div>
+						</div>	
+							<div class="mission-div-message"><span>留言</span>
+								<div class="mission-div-text">
+									<textarea data-role="none" readonly="readonly" class="mission-textarea-message_text"></textarea>
+								</div>
+							</div>
+					</div>
+					<!--完成扭蛋------------------------------------------------------------------------------>
+					<div class="mission-div-finish mission-div">
+						<div class="mission-div-finish_btn">
+								<img src="images/mission/missionC-32.png">
+								<img src="images/mission/missionC-32.png" class="mission-btn-dia_answer">
+						</div>
+
+						<div class="mission-div-score" id="myscore">
+							<p>我的<br/>回饋</p>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_mypoints">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_mypoints">
+							<textarea data-role="none" readonly="readonly" ></textarea>
+							</div>
+						</div>
+						<div class="mission-div-score" id="getscore">
+							<p>對方<br/>回饋</p>
+							<div class="mission-div-heart">
+							<img src="images/mission/missionC-20.png" data-score="1" class="1_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="2" class="2_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="3" class="3_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="4" class="4_getpoints">
+							<img src="images/mission/missionC-20.png" data-score="5" class="5_getpoints">
+							<textarea data-role="none" readonly="readonly"></textarea>
+							</div>
+						</div>	
+					</div>
+				</div>		
+				<!--小視窗區---------------------------------------------------------------------------->
+				<!--小視窗區---------------------------------------------------------------------------->
+				<!--小視窗區---------------------------------------------------------------------------->
+					
+				<!--看圖片小視窗-->	
+					<div class="mission-div-dialog_seepic">
+						<div class="mission-dialog-title"><span>觀看任務內容</span><img src="images/emial_setting/email_setting07.png" class="dialog_cancle"></div>
+						<div class="mission-dialog-answer">
+							<div class="mission-dialog-content mission-dialog-pic_content"><img id="answer_pic"></div>
+						</div>
+					</div>
+				<!--看解答小視窗-->
+					<div class="mission-div-dialog_seeanswer">
+						<div class="mission-dialog-title"><span>觀看任務內容</span><img src="images/emial_setting/email_setting07.png" class="dialog_cancle"></div>
+						<div class="mission-dialog-answer">
+							<div class="mission-dialog-content"><p id="dialog_answer"></p></div>
+						</div>
+					</div>
+				<!--確定任務評分小視窗-->
+					<div class="mission-div-dialog_checkscore">
+						<div class="mission-dialog-answer">
+							<p>送出後任務評分無法修改<br/>請問是否確定送出評分?</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+						<img src="images/mission/missionC-31.png" id="dia-btn_cancle">
+						<img src="images/mission/missionC-32.png" id="dia-btn_enter">
+						</div>
+					</div>
+				<!--確定評分送出小視窗-->
+					<div class="mission-div-dialog_ok">
+						<div class="mission-dialog-answer">
+							<p>送出成功了喔~</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+						<a href="#mission-page-mission"><img src="images/mission/missionC-32.png" id="dia-btn_ok"></a>
+						</div>
+					</div>
+				<!--發布者評分送出小視窗-->
+					<div class="mission-div-dialog_getscore">
+						<div class="mission-dialog-answer">
+							<p>評分結果與回饋已送出<br/>已為您增加愛心囉!</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+							<a href="#mission-page-infro"><img src="images/mission/missionC-32.png" id="dia-btn_getok"></a>
+						</div>
+					</div>
+				<!--執行者評分送出小視窗-->
+					<div class="mission-div-dialog_executorgetscore">
+						<div class="mission-dialog-answer">
+							<p>評分結果與回饋已送達<br/>已為您增加愛心囉!<br/>PS.扭蛋已加入收藏囉!</p>
+						</div>
+						<div class="mission-dialog-btn_submit">
+							<a href="#mission-page-mission"><img src="images/mission/missionC-32.png" id="dia-btn_getok"></a>
+						</div>
+					</div>
+				<!--小視窗出現時後面的mask-->	
+					<div class="all-div-mask"></div>
+				
+					
+				
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+			</div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+			</div>
+        
+		<script src="mochi_function.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				window.localStorage.setItem('username',"111");
+				//second_bar_animation
+                var SecondBar_value={
+					IsSecondBarVisible:false,
+					SecondBarIsWhat:null
+				};
+                $(".bar-div-bar_item").on("click",SecondBar_value,animate_bar);
+				//---------END
+				
+				
+				//setting
+				setting_event();
+				//showannounce
+				showannounce();
+				$("#mission_announce").on("click",showannounce);
+				$("#mission_execute").on("click",showexecute);
+				//mission
+				mission_event()
+				
+			
+				
+				
+
+			});
+			
+			
+		</script>
+		
+    </body>
+</html>

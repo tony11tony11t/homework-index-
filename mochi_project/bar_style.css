@@ -5,6 +5,9 @@
                 font-weight: 900;
 				background-color: transparent;
             }
+			::-webkit-scrollbar { 
+    		display: none; 
+			}
 /*---------------------------------------------------------------------------------------------------
 //---------------bar--------------/
 ---------------------------------------------------------------------------------------------------	*/
@@ -114,8 +117,7 @@
                 margin-right: 0.5%;
                 vertical-align: middle;
 				cursor: pointer;
-				width: 15%;
-                
+				width: 15%; 
             }
             .bar-div-bar_home{
                 display: inline-block;
@@ -180,7 +182,7 @@
 
 
 			#loading-page-loading{
-				background-image: url(images/loading/loading-21.png);
+				background-image: url(images/loading/log_in-08-11.png);
 				position: relative;
 			}
 		
@@ -255,7 +257,7 @@
 				position: relative;
 				height:100%;
 				padding: 0px;
-				background-image: url(images/loading/loading-21.png);
+				background-image: url(images/loading/log_in-08-11.png);
 			}
 			.login-div-window{
 				
@@ -264,13 +266,14 @@
 				width: 90%;
 				border-radius: 10px;
 				left:5%;
-				top:20%;
+				top:25%;
 			}
 			#login_window{
-				height: 45%;
+				
+				height: 40%;
 			}
 			#registered_window{
-				height: 55%;
+				height: 50%;
 			}
 			.login-div-content{
 				background-color:#FCEBA2;
@@ -284,64 +287,613 @@
 			}
 			.login-div-title{
 				position: relative;
-				height: 14.5%;
+				height: 16%;
 				text-align: center;
 				color: white;
-				font-size: 20pt;
-				top: 1.5%;
+				font-size: 15pt;
+				top: 3%;
 			}
 			.login-span-txt{
 				color:#EA5514;
 				display: inline-block;
+				vertical-align: middle;
 				margin-left: 6%;
 				margin-right: 6%;
 				font-size: 15pt;
+				margin-top: 3%;
 			}
 			.login-form-login{
 				position: relative;
-				top: 10%;
+				top: 5%;
 			}
-			.ui-input-text{
+			.login-txt-field{
+				vertical-align: middle;
 				width: 70%;
+				margin-top: 3%;
 				display: inline-block;
 				border: solid #EA5514 1px;
 				background-color: white;
-				
+				border-radius: 10px;
+			}
+			.rgt_field{
+				height: 13%;
+				padding: 3px;
+			}
+			.login_field{
+				height: 18%;
+				padding: 3px;
 			}
 			.login-btn-login{
 				display: inline-block;
 				width: 25%;
-				height: 65%;
+				
 				position: relative;
-				margin-left:2.5%; 
-				margin-right:2.5%;
-				padding-top:15px;
-				background-color: #EA5514;
+				margin-left:1%; 
+				margin-right:1%;
+				
 				color: white;
-				font-size: 12pt;
+				
 				border-radius: 10px;
 				text-decoration: none;
 			}
-		
+			.login-btn-login>img{
+				width: 100%;
+			}
 			.login-btn-bar{
 				position: relative;
 				text-align: center;
-				top: 20%;
-				height: 20%;
+				top: 10%;
+				
 			}
 			.result{
 				text-align: center;
 				position: relative;
-				top:15%;
-				
+				top:7%;
+				font-size:10pt;
 				color: red;
 			}
+/*---------------------------------------------------------------------------------------------------
+//---------------instruction--------------/
+---------------------------------------------------------------------------------------------------	*/			
+		#instruction-page-instruction{
+				position: relative;
+			}
+			.instruction_content{
+				position: relative;
+				padding: 0px;
+				height:100%;
+				
+				
+			}
+			.instruction-div-img_content{
+				position: relative;
+				padding: 0px;
+				height:100%;
+			}
+			.instruction-img-instruction{
+				position: absolute;
+				height:100%;
+				width: 100%;
+			}
+			.instruction_footer{
+				position: relative;
+				top:-6%;
+                border: 0px;
+                height: 6%;
+				text-align: center;	
+            }
+			.instruction-span-btn{
+				color: white;
+				display: inline-block;
+			}
+			@media only screen and (max-width:260px){
+			.instruction-span-btn{
+				
+				display: none;
+			}
+			}
 			
+			.instruction-div-page{
+				width: 60%;
+				text-align: center;
+				display: inline-block;
+			}
+			.instruction-div-page_dot>img{
+				
+				height: 30%;
+			}
+			.instruction-div-page_dot{
+				margin-left: 2%;
+				margin-right: 2%;
+				display: inline-block;
+			}
+			#btn_back{
+				visibility:hidden;
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------setting--------------/
+---------------------------------------------------------------------------------------------------	*/	
+			.all-div-mask{
+				position: fixed;
+				top:-11%;
+				
+				height: 100%;
+				width: 100%;
+				background-color: lightgray;
+				opacity: 0.5;
+				display: none;
+			}
+			.setting-div-page{
+				height: 100%;
+				display:none;
+			}
+			.setting-div-dialog{
+				position:relative;
+				left:15%;
+				top:20%;
+				width: 70vw;
+				height:50%;
+				z-index: 100;
+				background-color: #FFCE00;
+				text-align: center;				
 
-
-
-
-
+			}
+			.setting-div-title{
+				position: relative;
+				font-size: 20pt;
+				color:white;
+				height:15%;
+				background-color: #EA5514;
+			}
+			.setting-div-title>img{
+				position: absolute;
+				
+				left: 88%;
+				
+				height: 100%;
+			}
+			.setting-div-title>span{
+				position: relative;
+				vertical-align: top;
+			}
+			.setting-div-music{
+				position: relative;
+				top:10%;
+				height: 20%;
+				
+			}
+			.setting-div-music>img{
+				position: relative;
+				left: 5%;
+				vertical-align: middle;
+				height: 80%;
+				width:50%;
+			}
+			.setting-div-music>span{
+				position: relative;
+				
+				vertical-align: middle;
+				font-size: 18pt;
+				height: 100%;
+			}
+			.settiing-div-btn{
+				
+				position: relative;
+				top:15%;
+				height: 20%;
+			}
+			.settiing-div-btn>img{
+				height: 100%;
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------mission--------------/
+---------------------------------------------------------------------------------------------------	*/
+			#mission-page-mission{
+				background-color: #3E3A39;
+				position: relative;
+			}
+			.mission-div-page{
+				height:100%;	
+			}
+			.mission-div-title{
+				position: relative;
+				text-align: center;
+				height: 10%;
+			}
+			.mission-div-title>h3{
+				position: relative;
+				font-size:20pt;
+				top:10%;
+				color: white;
+				display: inline-block;
+			}
+			.mission-div-menu>img{
+				
+				display: inline-block;
+				margin-left: 5%;
+				margin-right: 5%;
+				height: 100%;
+				
+			}
+			.mission-div-menu{
+				position: relative;
+				top:3%;
+				height: 10%;
+				text-align: center;
+			}
+			.mission-div-list{
+				position: relative;
+				overflow: scroll;
+				height:70%;
+				
+				top:6%;
+			}
+			.mission-div-list_item{
+				position: relative;
+				background-color: white;
+				background-size: 100% 90%;
+				background-repeat: no-repeat;
+				height:20%;
+				width: 80%;
+				left: 10%;
+				border-radius: 10px;
+				margin-top: 10px;
+			}
+			.mission-img-capsule_type{
+				height: 100%;
+				vertical-align: middle;
+			}
+			.mission-div-infro{
+				
+				height:50%;
+				display: inline-block;
+				font-size: 18pt;
+				
+				width: 42%;
+				overflow: hidden;
+				vertical-align: middle;
+				margin-left: 2%;
+				text-overflow:clip;
+				white-space:nowrap;
+			}
+			.mission-div-infro>p{
+				height: 100%;
+			}
+			.mission-div-typeandpeople{
+				position: absolute;
+				top:10%;
+				height:40%;
+			}
+			.mission-img-type{
+				height: 100%;
+				
+			}
+			.mission-span-from{
+				
+				background-image: url(images/mission/missionC-11.png);
+				background-size: 100% 100%;
+				padding-left: 5pt;
+				font-size: 9pt;
+			}
+			.mission-img-state{
+				position: absolute;
+				width:15%;
+				left:83%;
+				top:5%;
+			}
+			.mission-p-time{
+				position: relative;
+				top:70%;
+				float: right;
+				
+				width:25%;
+				font-size: 8pt;
+				
+			}
+			#mission-page-infro{
+				position: relative;
+				background-color:#FFE783; 
+			}
+			.mission-div-infro_page{
+				position: relative;
+				height: 100%;
+				
+			}
+			.mission-img-logo{
+				height: 35%;
+				position: relative;
+			}
+			.mission-img-close{
+				position: absolute;
+				width: 8vw;
+				
+				left:88%;
+			}
+			.mission-div-detail{
+				position: absolute;
+				top:5%;
+				left:45%;
+				width:45%;
+				
+			}
+			.mission-div-detail>div{
+				margin-bottom: 10px;
+				display: inline-block;
+			}
+			.mission-div-detail>div>img{
+				margin-left: 5%;
+				width: 40%;
+				vertical-align:middle;
+				
+			}
+			.mission-div-from{
+				position: relative;
+				
+				left:10%;
+			}
+			.mission-div-from>p{
+				display: inline-block;
+				margin-left: 5%;
+				width: 70%;
+				line-height: 30px;
+				padding-left: 2%;
+				background-color: white;
+				border-radius: 5px;
+			}
+			.mission-div-question{
+				position: relative;
+				top:2%;
+				left:10%;
+			}
+			.mission-div-question>p{
+				vertical-align: top;
+				display: inline-block;
+				margin-left: 5%;
+				width: 70%;
+				line-height: 20px;
+				padding-left: 2%;
+				background-color: white;
+				border-radius: 5px;
+			}
+			
+			.mission-div-no>span{
+				margin-left: 5%;
+				line-height: 80px;
+				padding: 2%;
+				background-color: #3E3A39;
+				color: white;
+				border-radius: 5px;
+			}
+			.mission-div-text_answer{		
+				position: relative;
+				top:4%;
+				height: 12%;
+			}
+			.mission-div-text_answer>img{
+				vertical-align: top;
+				height: 80%;
+				margin-left: 5%;
+				
+			}
+			.mission-div-score{
+				position: relative;
+				top:8%;
+				
+				height: 8%;	
+			}
+			.mission-div-heart{
+				vertical-align: top;
+				width: 80%;
+				
+			}
+			.mission-div-heart>img{
+				
+				width: 10%;
+			}
+			
+			.mission-div-heart{
+				display: inline-block;
+				margin-left: 5%;
+			}
+			.mission-div-text{
+				
+				vertical-align: top;
+				display: inline-block;
+				margin-left: 5%;
+				width: 70%;
+				
+			}
+			.mission-div-text>textarea{
+				resize: none;
+				background-color: white;
+				vertical-align: top;
+				border-radius: 10px;
+				border-style: none;
+				padding: 2px;
+				box-shadow:2px 2px 5px  #888888 inset;
+				width: 100%;
+			}
+		
+			.mission-img-btn_submit{
+				position: absolute;
+				height: 25%;
+				top:100%;
+				left: 40%;
+				margin-top: 5px;
+			}
+			.mission-img-btn_submit>img{
+				height:100%;
+			}
+			
+			
+			.mission-div-dialog_seeanswer{
+				position:absolute;
+				top:20%;
+				left:10%;
+				width: 80vw;
+				height:60%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+						
+			}
+			
+			.mission-dialog-title{
+				position: fixed;
+				font-size: 15pt;
+				color:white;
+				height: 6%;
+				width: 80%;
+				background-color: #EA5514;
+				text-align: center;
+			}
+			.mission-dialog-title>span{
+				position: relative;
+				top:20%;
+			}
+			.mission-dialog-title>img{
+				position: absolute;
+				height: 100%;
+				left: 85%;	
+			}
+			
+			.mission-dialog-answer{
+				position: absolute;
+				top:12%;
+			}
+			.mission-dialog-answer>span{
+				position: absolute;
+				margin-right: 5%;
+				left:5%;
+			}
+			.mission-dialog-content{
+				padding: 2%;
+				
+				margin-left: 3.5%;
+				width: 90%;
+				background-color: white;
+				border-radius:10px;
+				text-align: left;
+				
+			}
+			.mission-div-dialog_checkscore{
+				position:absolute;
+				top:35%;
+				left:10%;
+				width: 80vw;
+				height:30%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
+			.mission-dialog-answer{
+				position:relative;
+				
+				text-align: center;
+				font-size:12pt;
+			}
+			.mission-dialog-btn_submit{
+				position:relative;
+				text-align: center;
+				top:30%;
+				height: 25%;
+				
+			}
+			.mission-dialog-btn_submit>img{
+				
+				display: inline-block;
+				height: 80%;
+				margin-right: 2.5%;
+				margin-left: 2.5%;
+			}
+			.mission-div{
+				position: relative;
+				left:10%;
+				top:6%;
+			}
+			.mission-div-no{
+				position: relative;
+				left:0%;
+				top:6%;
+			}
+			.mission-div-finish_btn{
+				height: 6%;
+				text-align: right;
+				margin-right: 15%;
+				margin-bottom: 2%;
+			}
+			.mission-div-finish_btn>img{
+				height:100%;
+			}
+			.mission-div-score>p{
+				display: inline-block;
+			}
+			.mission-div-heart>textarea{
+				resize: none;
+				background-color: white;
+				vertical-align: top;
+				border-radius: 10px;
+				border-style: none;
+				padding: 2px;
+				box-shadow:2px 2px 5px  #888888 inset;
+				width: 80%;
+				height:50%;
+			}
+			#myscore,#getscore{
+				height:20%;
+			}
+			.mission-div-dialog_ok{
+				position:absolute;
+				top:35%;
+				left:10%;
+				width: 80vw;
+				height:30%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
+			.mission-div-dialog_getscore{
+				position:absolute;
+				top:35%;
+				left:10%;
+				width: 80vw;
+				height:30%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
+			.mission-div-dialog_seepic{
+				position:absolute;
+				top:20%;
+				left:10%;
+				width: 80vw;
+				height:60%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
+			#answer_pic{
+				height:80%;
+			}
+			.mission-dialog-pic_content{
+				text-align: center;
+			}
+			.mission-div-dialog_executorgetscore{
+				position:absolute;
+				top:35%;
+				left:10%;
+				width: 80vw;
+				height:30%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
 
 
 
