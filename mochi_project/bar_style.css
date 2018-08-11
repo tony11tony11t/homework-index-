@@ -8,6 +8,23 @@
 			::-webkit-scrollbar { 
     		display: none; 
 			}
+			.index-btn-toeggground{
+				position: absolute;
+				width: 20%;
+				left: 80%;
+				top:40%;
+				text-align: center;
+			}
+			.index-btn-toeggground>img{
+				width: 80%;
+			}
+			.index-btn-toeggground>span{
+				width: 20%;
+				color: white;
+				font-size: 10pt;
+				font-weight: 300;
+			}
+			
 /*---------------------------------------------------------------------------------------------------
 //---------------bar--------------/
 ---------------------------------------------------------------------------------------------------	*/
@@ -553,10 +570,12 @@
 				overflow: hidden;
 				vertical-align: middle;
 				margin-left: 2%;
-				text-overflow:clip;
+				text-overflow:ellipsis;
 				white-space:nowrap;
+				
 			}
 			.mission-div-infro>p{
+				
 				height: 100%;
 			}
 			.mission-div-typeandpeople{
@@ -713,7 +732,16 @@
 				box-shadow:2px 2px 5px  #888888 inset;
 				width: 100%;
 			}
-		
+			.mission-div-text_answer>p{
+				vertical-align: top;
+				display: inline-block;
+				margin-left: 5%;
+				width: 70%;
+				line-height: 20px;
+				padding-left: 2%;
+				background-color: white;
+				border-radius: 5px;
+			}
 			.mission-img-btn_submit{
 				position: absolute;
 				height: 25%;
@@ -894,12 +922,444 @@
 				border-radius: 10px;
 				display: none;
 			}
+			.mission-img-btn_eggground{
+				margin-top: 20%;
+				height:8%;
+				text-align: right;
+				width: 85%;
+			}
+			.mission-img-btn_eggground img{
+				display: inline-block;
+				height:100%;
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------friend--------------/
+---------------------------------------------------------------------------------------------------	*/
+			#friend-page-friend{
+				background-color: #232323;
+				position: relative;
+			}
+			#friend-page-addfriend{
+				background-color: #0A0F3F;
+				position: relative;
+			}
+			.friend-div-content{
+				position: relative;
+				top:2%;
+				height: 100%;
+			}
+			.friend-div-title{
+				position: relative;
+				height: 10%;
+				text-align: center;
+				
+			}
+			.friend-div-title>p{
+				font-size: 18pt;
+				color: white;
+				padding-top: 5px;
+			}
+			.friend-div-title>img{
+				position: absolute;
+				top:0%;
+				left: 88%;
+				height: 80%;
+			}
+			.friend-img-invite{
+				height:8%;
+				margin-left: 10%;
+			}
+			.friend-div-list{
+				position: relative;
+				top:5%;
+				overflow: scroll;
+				height: 74%;
+				
+			}
+			.friend-div-list_item{
+				position: relative;
+				margin-top:10px;
+				margin-left: 10%;
+				height: 20%;
+				width: 80%;
+				background-color: white;
+				border-radius: 5px;
+				
+			}
+			.friend-div-list_face{
+				display: inline-block;
+				background-color: #232323;
+				height: 10vh;
+				width: 10vh;
+				position: relative;
+				top:3%;
+				left: 2%;	
+				text-align: center;
+			}
+			.friend-div-list_face>img{
+				height: 100%;
+			}
+			.friend-div-list_item>img{
+				display: inline-block;
+			}
+			.friend-div-list_name{
+				display: inline-block;
+				background-image: url(images/friend/friend-10.png);
+				background-size: 100% 100%;
+				position: relative;
+				top:5%;
+				vertical-align: top;
+				margin-left: 5%;
+				height: 50%;
+				width:45%;
+				text-align: center;
+				font-size: 12pt;
+				line-height: 30px;
+			}
+			.friend-div-list_infor{
+				position: relative;
+				top:5%;
+				vertical-align: top;
+				height: 50%;
+			}
+			.friend-p-invite_title>span{
+				font-size: 14pt;
+				border: 2px solid white;
+				border-radius: 5px;
+				padding: 5px;
+			}
+			.friend-img-addall{
+				height:100%;
+				float: right;
+				margin-right: 5%;
+			}
+			.friend-div-addall{
+				position: relative;
+				top:2%;
+				height:8%;
+			}
+			.friend-div-list_btn{
+				margin-right: 5%;
+				height: 35%;
+			}
+			.friend-div-dialog_check{
+				position: absolute;
+				top:40%;
+				left:15%;
+				height: 18%;	
+				width: 70%;
+				background-color: rgba(35,35,35,0.9);
+				text-align: center;
+				padding: 3%;
+				color: white;
+				border-radius: 5px;
+				display: none;
+				z-index: 1000;
+			}
+			.friend-dialog-btn_submit>img{
+				margin-top: 20px;
+				height: 30%;
+			}
+			.friend-div-dialog_infor{
+				position:absolute;
+				top:30%;
+				left:5%;
+				width: 90vw;
+				height:50%;
+				z-index: 100;
+				background-color:  #FFCE00;
+				border-radius: 10px;
+				display: none;
+				z-index: 100;
+			}
+			.friend-div-dialog_blackinfor{
+				position:absolute;
+				top:30%;
+				left:5%;
+				width: 90vw;
+				height:50%;
+				z-index: 100;
+				background-color:  rgba(35,35,35,0.9);
+				border-radius: 10px;
+				display: none;
+				z-index: 100;
+				color:white;
+			}
+			.friend-dialog-title{
+				position: fixed;
+				font-size: 15pt;
+				color:white;
+				height: 6%;
+				width: 90%;
+				background-color: #EA5514;
+				text-align: center;
+			}
+			.friend-dialog-title>span{
+				position: relative;
+				top:20%;
+			}
+			.friend-dialog-title img{
+				position: absolute;
+				height: 100%;
+				left: 85%;	
+			}
+			.friend-dialog-face{
+				display: inline-block;
+				width: 50%;
+			}
+			.friend-dialog-detail{
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				width: 45%;
+				height: 65%;
+			}
+			.friend-dialog-detail>p{
+				margin-top: 20px;
+				font-size: 15pt;
+				
+			}
+			.friend-dialog-face>img{
+				width: 100%;
+				margin-top: 5%;
+			}
+			.friend-dialog-content{
+				position: relative;
+				top:12%;
+			}
+			.friend-div-dialog_select{
+				position:absolute;
+				top:35%;
+				left:5%;
+				width: 90vw;
+				height:30%;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				z-index: 1;
+				display: none;
+			}
+			.friend-dialog-add_content{
+				position: relative;
+				top:10%;
+				text-align: center;
+				line-height: 80px;
+				font-size: 15pt;
+			}
+			.friend-dialog-select_bar{
+				height: 20%;
+				text-align: center;
+			}
+			.friend-dialog-select_bar>input{
+				width: 70vw;
+				background-color: white;
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
+				border-radius: 5px;
+			}
+			.friend-dialog-select_bar>img{
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.friend-dialog-selectcontent{
+				position: relative;
+				top:15%;
+				
+			}
+			.friend-dialog-blacktitle{
+				position: fixed;
+				font-size: 15pt;
+				color:white;
+				height: 6%;
+				width: 90%;
+				background-color: rgba(35,35,35,0.9);
+				text-align: center;	
+			}
+			.friend-dialog-blacktitle img{
+				position: absolute;
+				height: 100%;
+				left: 85%;	
+			}
+			.friend-dialog-blacktitle>span{
+				position: relative;
+				top:20%;
+			}
+			#select_to_add{
+				float: right;
+				height: 10%;
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------collection--------------/
+---------------------------------------------------------------------------------------------------	*/
+			#collection-page-collection{
+				position: relative;
+				background-color:#232323;
+			}
+			.collection-div-cabinet{
+				position: relative;
+				
+				height: 80%;
+				background-image: url(images/collection/collect-01.png);
+				background-size: 100% 100%;
+			}
+			.collection-div-antenna{
+				position: relative;
+				height: 15%;	
+				text-align: center;
+			}
+			.collection-div-antenna>img{
+				position: relative;
+				top:10%;
+				height: 100%;
+			}
+			.collection-div-title{
+				height: 5%;
+				text-align: center;
+				color: white;
+			}
+			.collection-div-position{
+				left:18%;
+				top:6%;
+				width:64.5%;
+				height: 75%;
+				position: absolute;
+				
+				
+			}
+			.collection-div-item:nth-child(-n+3){
+				position: relative;
+				display: inline-block;
 
+				width:32%;
+				height:29%;
+			}
+			.collection-div-item:nth-child(n+4):nth-child(-n+6){
+				position: relative;
+				top:4%;
+				display: inline-block;
 
-
-
-
-
-
-
+				width:32%;
+				height:29%;
+			}
+			.collection-div-item:nth-child(n+6){
+				position: relative;
+				top:9%;
+				display: inline-block;
+				
+				width:32%;
+				height:29%;
+			}
+			.collection-div-item img{
+				position: absolute;
+				top:5%;
+				left: 10%;
+				height: 80%;
+				width: 80%;
+				z-index: 1;
+			}
+			.collection-div-item>p{
+				position: absolute;
+				background-image: url(images/collection/collect-12.png);
+				background-size: 100% 100%;
+				top:80%;
+				font-size: 12px;
+				color: white;
+				font-weight: 100;
+				width: 100%;
+				z-index: 10;
+				text-align: center;
+				overflow: hidden;
+				white-space: nowrap;
+  				text-overflow: ellipsis;
+				height: 21%;
+			}
+			
+			.collection-div-back{
+				position: relative;
+				top:30%;
+				width: 12%;
+			}
+			.collection-div-next{
+				position: relative;
+				top:30%;
+				width: 12%;
+				float: right;
+			}
+/*---------------------------------------------------------------------------------------------------
+//---------------扭蛋廣場--------------/
+---------------------------------------------------------------------------------------------------	*/
+			#index-page-egg{
+				position:relative;
+				background-image:url(images/eggground/park-22.png);
+				background-size: 100% 100%;
+			}
+			.bar-div-main{
+                width:100%;
+                height:100%;
+            }
+            .bar-div-back{
+                position: relative;
+                width:15%;
+                height:12%;
+                background-image: url(images/eggground/park-23.png);
+                   background-size: 100% 100%;
+                background-repeat: no-repeat;
+                left:2%;
+                top:2%;
+                float:left;
+            }
+            .bar-div-egg{
+                float:left;
+                position: relative;
+                background-image: url(images/eggground/park-01.png);
+                 background-size: 100% 100%;
+                background-repeat: no-repeat;
+                width:55%;
+                height:75%;
+                left:7%;
+                top:10%;
+            }
+            .bar-div-start{
+                float:right;
+                position: relative;
+                background-image: url(images/eggground/park-02.png);
+                 background-size: 100% 100%;
+                background-repeat: no-repeat;
+                width:22%;
+                height:8%;
+                top:90%;
+                right:38%;
+            }
+			.egg-div-dialog_checkscore{
+				position:absolute;
+				top:35%;
+				left:10%;
+				width: 80vw;
+				height:20%;
+				z-index: 100;
+				background-color: #FFCE00;
+				border-radius: 10px;
+				display: none;
+			}
+			.egg-dialog-answer{
+				position:relative;
+				top:10%;
+				text-align: center;
+				font-size:12pt;
+			}
+			.egg-dialog-btn_submit{
+				position:relative;
+				text-align: center;
+				top:30%;
+				height: 25%;
+				
+			}
+			.egg-dialog-btn_submit img{
+				
+				display: inline-block;
+				height: 100%;
+				margin-right: 2.5%;
+				margin-left: 2.5%;
+			}
 

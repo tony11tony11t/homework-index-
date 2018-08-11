@@ -242,8 +242,8 @@ var NOW_HASH="#loading-page-loading";
 	//設定遊戲背景
 	function setbackground(background_style){
 		switch(background_style){
-			case "background_001":
-				$("#index-page-index").css({backgroundImage:"url('images/index/background_001/bg01-02.png')"});
+			case "background_000":
+				$("#index-page-index").css({backgroundImage:"url('images/index/background_000/bg01-02.png')"});
 				$(".index-img-bg_star").css({display:"block"});
 			break;
 			default:break;
@@ -542,7 +542,13 @@ var NOW_HASH="#loading-page-loading";
 				//小視窗看答案
 				$(".mission-btn-dia_answer").on("click",function(){
 					$(".all-div-mask").css({display:"block"});
+					if($("#mission_type").attr("src")=="images/mission/missionC-09.png")
 					$(".mission-div-dialog_seeanswer").css({display:"block"});
+					else
+					$(".mission-div-dialog_seepic").css({display:"block"});
+					
+					
+						
 				})
 				//小視窗關閉
 				$(".dialog_cancle").on("click",function(){
@@ -558,34 +564,166 @@ var NOW_HASH="#loading-page-loading";
 					$(".all-div-mask").css({display:"block"});
 				})
 				}
+	//好友中所有事件
+	function friend_event(){
+				$("#myfriendlist").on("click",".friend_infor",function(){		
+					var username=$(this).parent();
+					var nickname=$(this).parent().find("p").html();
+					$(".nickname").html(nickname);
+					$(".friend-div-dialog_infor").css({display:"block"});
+				});
+				
+				
+				$("#myinvitefriendlist").on("click",".friend_ok",function(){		
+					var username=$(this).parent().data("id");
+					var email_ID=$(this).parent().data("email_id");
+					var nickname=$(this).parent().find("p").html();
+					$(".friend-dialog-content>p").html("你和"+nickname+"成為好友");
+					$(".friend-div-dialog_check").css({display:"block"});
+					
+					insertfriend(username);
+					deleteemail(email_ID);
+					showemail();
+				});
+				
+				$("#myinvitefriendlist").on("click",".friend_cancle",function(){		
+					var username=$(this).parent().data("id");
+					var email_ID=$(this).parent().data("email_id");
+					var nickname=$(this).parent().find("p").html();
+					$(".friend-dialog-content>p").html("你拒絕了"+nickname+"的好友邀請");
+					$(".friend-div-dialog_check").css({display:"block"});
+					deleteemail(email_ID);
+					showemail();
+				});
+				
+				
+				
+				$(".friend-dialog_cancle").on("click",function(){
+					$(".friend-div-dialog_infor").css({display:"none"});
+					$(".friend-div-dialog_blackinfor").css({display:"none"});
+				})
+				$(".friend-dialog_select_cancle").on("click",function(){
+					$(".friend-div-dialog_select").css({display:"none"});
+					
+				})
+				$(".friend-dialog-btn_submit>img").on("click",function(){
+					$(".friend-div-dialog_check").css({display:"none"});
+					$(".friend-div-dialog_select").css({display:"none"});
+					$(".friend-div-dialog_blackinfor").css({display:"none"});
+				})
+				
+				$(".friend-img-addall").on("click",function(){
+					$(".friend-dialog-content>p").html("你和全部人成為好友");
+					$(".friend-div-dialog_check").css({display:"block"});
+					$("#myinvitefriendlist .friend-div-list_item").each(function(){
+					var username=$(this).data("id");
+					var email_ID=$(this).data("email_id");
+						insertfriend(username);
+						deleteemail(email_ID);
+						showemail();
+					})
+					
+				})
+				$("#invite_cancle").on("click",function(){
+					$.mobile.navigate("#friend-page-friend");
+				})
+				
+				$("#btn-select").on("click",function(){
+					var username=$("#username-text").val();
+					selectfriend(username);
+				})
+				
+				$("#btn-add_friend").on("click",function(){
+					$(".friend-div-dialog_select").css({display:"block"});
+				})
+				
+				$("#select_to_add").on("click",function(){
+					$(".friend-dialog-content>p").html("已發送邀請囉!");
+					$(".friend-div-dialog_check").css({display:"block"});
+					var username=$("#username-text").val();
+					sendemail(username,"好友邀請","好友邀請","好友");
+					
+				})
+				$(".friend-img-invite").on("click",function(){
+					showemail();
+				})
+	}
+	//收藏中所有事件
+	function collection_event(){
+				$(".collection-div-back").on("click",function(){
+					collection_page-=1;
+					if(collection_page<=1){
+						collection_page=1;
+						$(".collection-div-back").attr("src","images/collection/collect-05.png");
+					}
+					else{
+						$(".collection-div-back").attr("src","images/collection/collect-06.png");
+					}	
+					showcollection(collection_page);
+				});
+				$(".collection-div-next").on("click",function(){
+					collection_page+=1;
+					if(collection_page>=Math.ceil(showcollection_num()/9)){
+						collection_page=Math.ceil(showcollection_num()/9);
+						$(".collection-div-next").attr("src","images/collection/collect-08.png");
+					}
+					else{
+						$(".collection-div-next").attr("src","images/collection/collect-07.png");
+					}
+					showcollection(collection_page);
+				})
+				if(Math.ceil(showcollection_num()/9)>1){
+					$(".collection-div-next").attr("src","images/collection/collect-07.png")
+				}
+	}
+	//扭蛋廣場所有事件
+	function eggground_event(){
+				$(".bar-div-start").on("click",function(){
+					$(".egg-div-dialog_checkscore").css({display:"block"})
+					
+				});
+				$("#eggdia-btn_cancle").on("click",function(){
+					$(".egg-div-dialog_checkscore").css({display:"none"})
+					
+				});
+				$("#eggdia-btn_enter").on("click",function(){
+					$(".egg-div-dialog_checkscore").css({display:"none"})
+					capsule_information(getcapsule(),"eggground");
+				});
+	}
 
 //--------------------------------------------------------------
 //--------------------mymochi事件------------------------------------
 //--------------------------------------------------------------
 	//顯示我的東西(mymochi)
-	function showMyMochi(){
+	function showMyMochi(category){
 				$.ajax({
                         url:"http://114.32.130.29/mochi/mymochi/Show_MemberProduct.php",
                         type:"POST",
                         datatype:"JSON",
-                        data:{"username":window.localStorage.getItem('username')},
+                        data:{"username":window.localStorage.getItem('username'),
+							  "category":category},
+						async:false,
                          success(msg){
-                            var result=JSON.parse(msg);
-                            for(var key in result){
-                                
-                                //key是你擁有的商品編號，result[key]是一個陣列
-                                 for(var value in result[key])
-                                 {
-									//value有name，category，img_filename這三種
-									 //result[key][name]...
-								 }
-                            }
-                            
+                          var result=JSON.parse(msg);
+						  var total=result.length;
+						  var count=-1;
+                          	$(".mochi-div-myitem_list_item").each(function(){
+								$(this).html("");
+								if(count==-1){
+									$(this).html("<img src='images/store/store026.png' id="+category+"00 data-category="+category+">");
+								}
+								else if(count<total){
+									$(this).html("<img src='images/index/mochi_style/"+category+"/s"+result[count]+".png' id="+result[count]+" data-category="+category+">");
+								}
+								count++;
+							})
                         },
                         error(msg){
                             alert(msg);
                         }
                  });
+		
 	}
 	//更換背景
 	function update_bg(bg){
@@ -608,6 +746,28 @@ var NOW_HASH="#loading-page-loading";
 					success(msg){},
 					error(msg){}
 				});
+	}
+	//縣市目前mochi樣式
+	//調出會員資料
+	function shownowMochi(){
+				$.ajax({
+                        url:"http://114.32.130.29/mochi/memberdata/Show_MemberData.php",
+                        type:"POST",
+                        datatype:"JSON",
+                        data:{"username":window.localStorage.getItem("username")},
+                        success(msg){
+                           var result=JSON.parse(msg);
+						   var style=result.mochi_style;
+						$("#mochi-img-A").attr("src","images/index/mochi_style/A/"+style.substr(0,3)+".png");
+						$("#mochi-img-B").attr("src","images/index/mochi_style/B/"+style.substr(3,3)+".png");
+						$("#mochi-img-C").attr("src","images/index/mochi_style/C/"+style.substr(6,3)+".png");
+						$("#mochi-img-D").attr("src","images/index/mochi_style/D/"+style.substr(9,3)+".png");
+						$(".mochi-div-bg").css({backgroundImage:"url(images/index/mochi_style/G/"+style.substr(12,3)+".png"});
+                        },
+                        error(msg){
+                            
+                        }
+                    });
 	}
 //--------------------------------------------------------------
 //--------------------商店事件------------------------------------
@@ -655,24 +815,55 @@ var NOW_HASH="#loading-page-loading";
 //--------------------------------------------------------------
 //--------------------收藏品事件------------------------------------
 //--------------------------------------------------------------
-	//顯示收藏品
-	function showcollection(){
+	//回傳共有幾個商品
+	function showcollection_num(){
+		var result=null;
 		$.ajax({
-                        url:"http://114.32.130.29/mochi/store/Show_Collection.php",
+                        url:"http://114.32.130.29/mochi/collection/Show_Collection.php",
                         type:"POST",
                         datatype:"JSON",
 			 			data:{"username":window.localStorage.getItem('username')},
+						async:false,
                         success(msg){
-                            var result=JSON.parse(msg);
-                           
+                           result=JSON.parse(msg);
+                           console.log(Object.keys(result).length);
+							
+                        },
+                        error(msg){
+                            alert(msg);
+                        }
+				});
+		return Object.keys(result).length;
+	}
+	//顯示收藏品
+	function showcollection(page){
+		$(".collection-div-position").html("");
+		$.ajax({
+                        url:"http://114.32.130.29/mochi/collection/Show_Collection.php",
+                        type:"POST",
+                        datatype:"JSON",
+			 			data:{"username":window.localStorage.getItem('username'),
+							 "page":page},
+                        success(msg){
+                           var result=JSON.parse(msg);
+                           console.log(result);
                             for(var key in result){
-                                
-								//key是你擁有的商品編號，result[key]是一個陣列
-                                 for(var value in result[key])
-                                 {
-                                     //value有很多東西
-									 //result[key][question]...
-                                 }
+                                if(result[key]["type"]=="解惑")
+									var str_type="collect-10";
+								else
+									var str_type="collect-11";
+								
+								//key是你擁有的編號，result[key]是一個陣列
+							oneitem="<div class='collection-div-item' data-id="+key+">"+
+									"<a href='#mission-page-infro'><img src='images/collection/"+ str_type+".png'></a>"+
+									"<p>"+result[key]["question"]+"</p></div>";
+						
+                                $(".collection-div-position")
+								.append(oneitem)
+								.on("click",".collection-div-item img",function(){
+									var capsule_ID=$(this).parent().parent().data("id");
+									capsule_information(capsule_ID);
+								})
                             }
                         },
                         error(msg){
@@ -955,20 +1146,25 @@ var NOW_HASH="#loading-page-loading";
 	}
 	//轉扭蛋機
 	function getcapsule(){
+		var capsule_ID=null;
 			$.ajax({
                         url:"http://114.32.130.29/mochi/capsule/Get_NewCapsule.php",
                         type:"POST",
                         datatype:"JSON",
                         data:{"username":window.localStorage.getItem('username')},
+						async:false,
                         success(msg){
 							var result=JSON.parse(msg);
-                               //回傳time,announcer,question,type,mochi_style
 							
+                               //回傳time,announcer,question,type,mochi_style,capsule_ID
+							capsule_ID=result.capsule_ID;
+							console.log(result);
                         },
                         error(msg){
                             alert(msg);
                         }
             });
+		return capsule_ID;
 	}
 	//指定接收者
 	function updateexecute(username,capsule_ID){
@@ -989,7 +1185,7 @@ var NOW_HASH="#loading-page-loading";
             });
 	}
 	//顯示扭蛋資訊
-	function capsule_information(capsule_ID){
+	function capsule_information(capsule_ID,page=null){
 		
 		$.ajax({
                         url:"http://114.32.130.29/mochi/capsule/Show_Capsule.php",
@@ -1040,6 +1236,11 @@ var NOW_HASH="#loading-page-loading";
 
 							$(".mission-div").css({display:"none"});
 							if(result[capsule_ID].state=="執行"
+									&&result[capsule_ID].announcer!=window.localStorage.getItem('username')
+							  		&&page=="eggground"){
+								$(".mission-div-newegg").css({display:"block"});
+							}
+							else if(result[capsule_ID].state=="執行"
 							   &&result[capsule_ID].announcer!=window.localStorage.getItem('username')
 							   &&result[capsule_ID].type=="解惑"){
 								$(".mission-div-execute_text").css({display:"block"});
@@ -1063,7 +1264,7 @@ var NOW_HASH="#loading-page-loading";
 								   &&result[capsule_ID].announcer==window.localStorage.getItem('username')){
 								$(".mission-div-getanswer").css({display:"block"});
 							}
-							else if(result[capsule_ID].state=="完成"){
+							else if(result[capsule_ID].state=="完成"||result[capsule_ID].state=="收藏"){
 								$(".mission-div-finish").css({display:"block"});
 							}
 							else{
@@ -1112,7 +1313,7 @@ var NOW_HASH="#loading-page-loading";
 							
 							//評分系統
 								$(".mission-div-heart>img").on("click",function(){
-									if($("#mission_state").attr("src")=="images/mission/missionC-40.png"||
+									if($("#mission_state").attr("src")=="images/mission/missionZ-08.png"||
 									  ($("#mission_state").attr("src")=="images/mission/missionB-02.png"&&
 									  window.localStorage.getItem('username')!=$(".mission-div-from>p").html())){
 									var capsule_ID=$(".mission-div-infro_page").data("id");
@@ -1126,6 +1327,12 @@ var NOW_HASH="#loading-page-loading";
 									}
 								});
 						//----------------------------------------------------------------------------------------------------
+							for(var i=1;i<=5;i++){
+							$("."+i+"_mypoints").attr("src","images/mission/missionC-20.png");
+							$("."+i+"_getpoints").attr("src","images/mission/missionC-20.png");
+							}
+							
+							
 							if(result[capsule_ID].announcer!=window.localStorage.getItem('username')){
 								for(var i=1;i<=result[capsule_ID].announcer_score;i++){
 								$("."+i+"_mypoints").attr("src","images/mission/missionC-19.png");
@@ -1165,7 +1372,9 @@ var NOW_HASH="#loading-page-loading";
 							
 						//dialog
 							$("#dialog_answer").html(result[capsule_ID].answer);
-						
+							$("#answer_pic").attr("src","http://114.32.130.29/mochi/Capsule_Answer_image/"+$('.mission-div-infro_page').data('id'));
+						//eggground
+							$(".mission-div-text_answer p").html(result[capsule_ID].time);
 							
                         },
                         error(msg){
@@ -1370,6 +1579,7 @@ var NOW_HASH="#loading-page-loading";
 	}
 	//顯示好友資訊
 	function showfriend(){
+		$("#myfriendlist").html("");
 		$.ajax({
                         url:"http://114.32.130.29/mochi/friend/Show_Friend.php",
                         type:"POST",
@@ -1453,7 +1663,7 @@ var NOW_HASH="#loading-page-loading";
                             var result=JSON.parse(msg);
 							$(".bar-span-game_name").html(result.nickname);
 							$(".bar-span-game_mony").html(result.money);
-							$(".index-img-mochi").attr("src","images/index/mochi_style/"+result.mochi_style+".png");
+						$(".index-img-mochi").attr("src","images/index/mochi_style/D/"+result.mochi_style.substr(9,3)+".png");
 							setbackground(result.background_style);
                         },
                         error(msg){
@@ -1538,5 +1748,7 @@ var NOW_HASH="#loading-page-loading";
 	}
 	
 	
+//--------------------------------------------------------------
+//--------------------扭蛋廣場------------------------------------
+//--------------------------------------------------------------
 
-	
