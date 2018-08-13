@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+        <link rel="stylesheet" href="template.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <style>
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+               .login-div-out{
+                width:90%;
+                height:40%;
+                position: relative;
+                left:5%;
+                top:25%;
+                background-image: url(images/logout-01.png);
+             background-size: 100% 100%;
+                background-repeat: no-repeat; 
+                
+            }
+            .login-div-out p{
+               font-family:Microsoft JhengHei;
+                font-size:16pt;
+                position: relative;
+                top:25%;
+                text-align: center;
+            }
+            .login-btn-yes{
+                position: relative;
+                float:left;
+                top:50%;
+                left:17%;
+                width:25%;
+                 height:20%;
+                background-image: url(images/logout-02.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat; 
+                cursor: pointer;
+            }
+            .login-btn-yes:hover{
+                 background-image: url(images/logout-04.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat; 
+            }
+              .login-btn-no{
+                position: relative;
+                   cursor: pointer;
+                top:50%;
+                left:60%;
+                  width:25%;
+                 height:20%;
+                    background-image: url(images/logout-03.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat; 
+            }
+               .login-btn-no:hover{
+                 background-image: url(images/logout-05.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat; 
+            }
+        </style>
+    </head>
+    <body>
+		<!--如果要新增PAGE，把底下這個模板再複製一份就好-->
+        <div data-role="page" id="index-page-out">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+            <div  data-role="content" class="content" >
+               <!--把內容寫在這裡-->
+		<div class="login-div-out">
+            <p>請問是否確定登出本遊戲</p>
+             <div class="login-btn-yes"></div>
+             <div class="login-btn-no"></div>
+                </div>
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+        
+		<script src="bar_style.js" type="text/javascript"></script>
+		

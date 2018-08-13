@@ -96,9 +96,10 @@
             }
            
             .yes{
+                cursor: pointer;
                    position: relative;
                 float:left;
-              background-image: url(emial_setting/email_setting_recut-09.png);
+              background-image: url(images/emial_setting/email_setting_recut-09.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
                    width:23%;
@@ -108,7 +109,8 @@
             
             .none
             {
-               background-image: url(emial_setting/email_setting_recut-10.png);
+                cursor: pointer;
+               background-image: url(images/emial_setting/email_setting_recut-10.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
               position: relative;
@@ -118,18 +120,30 @@
                top:42%;
                  
             }
+.none:hover{
+     background-image: url(images/emial_setting/email_setting_recut-08.png);
+               background-size: 100% 100%;
+                background-repeat: no-repeat; 
+}
+
              .recive{
+                 cursor:pointer;
                    position: relative;
               float:left;
-              background-image: url(emial_setting/email_setting_recut-11.png);
+              background-image: url(images/emial_setting/email_setting_recut-11.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
                   width:17%;
                 height:65%;
                top:42%;
             }
+          .recive:hover{
+     background-image: url(images/emial_setting/email_setting_recut-09.png);
+               background-size: 100% 100%;
+         }
             .Nrecive{
-                   background-image: url(emial_setting/email_setting_recut-08.png);
+                cursor:pointer;
+                   background-image: url(images/emial_setting/email_setting_recut-08.png);
                 float:left;
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
@@ -153,7 +167,8 @@
                 left: 10%;
             }
             .Alldelete{
-                 background-image: url(emial_setting/email_setting12.png);
+                cursor: pointer;
+                 background-image: url(images/emial_setting/email_setting12.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
               height:100%;
@@ -162,8 +177,12 @@
                 text-align: center;
                 bottom: 2%;
                 margin-left: 20%;
+}
+            .Alldelete:hover{
+                 background-image: url(images/emial_setting/email_setting13.png);
+                           background-size: 100% 100%;
             }
-        
+
             .name{
                 float: left;
                 height: 35%;
@@ -189,7 +208,7 @@
                 height: 95%;
                  background-color: #F39800;
                 border-radius: 5px;
-                background-image: url(emial_setting/missionC-06.png);
+                background-image: url(images/emial_setting/missionC-06.png);
                 background-size: 100% 100%;
                 background-repeat: no-repeat; 
             }
@@ -202,7 +221,7 @@
                 margin-left: 22%;
                
                 border-radius: 10px;
-                  background-image: url(emial_setting/email_setting16.png);
+                  background-image: url(images/emial_setting/email_setting16.png);
                   background-size: 100% 100%;
                 background-repeat: no-repeat; 
             }
@@ -211,7 +230,7 @@
                 float: left;
                 width:70%;
                 height:40%;
-                background-image: url(emial_setting/email_setting16.png);
+                background-image: url(images/emial_setting/email_setting16.png);
             }
             :root {
         --view :48%;
@@ -233,52 +252,67 @@
                 text-align: center;color: white;font-family:Microsoft JhengHei;font-size:16pt;
             }
             .dialog-btn-yes{
+                 cursor: pointer;
                position: relative; float:left;
                 height:20%;
                 width:20%;
                 top:25%;
-                margin-left:25%;
+                margin-left:20%;
+                background-image: url(images/emial_setting/email_setting27.png) ;
                 background-size: 100% 100%; 
             }
-            .dialog-btn-yes img{
-                width:100%;height:100%;
+            .dialog-btn-yes:hover{
+     background-image: url(images/emial_setting/email_setting29.png) ;
             }
+
+           
+           .dialog-btn-no:hover{
+             background-image: url(images/emial_setting/email_setting28.png) ;
+                    }
+
             .dialog-btn-no{
+                cursor: pointer;
                position: relative; float:left;
                 height:20%;
                 width:20%;
                 top:25%;
-                margin-left:5%;
+                margin-left:15%;
+                 background-image: url(images/emial_setting/email_setting26.png) ;
                 background-size: 100% 100%;
             }
-             .dialog-btn-no img{
-                width:100%;height:100%;
-            }
+             
              .dialog-delete-yes{
+                 cursor: pointer;
                  position: relative; float:left;
                 height:20%;
                 width:20%;
                 top:25%;
-                margin-left:25%;
+                margin-left:20%;
+                  background-image: url(images/emial_setting/email_setting27.png) ;
+                background-size: 100% 100%; 
                 background-size: 100% 100%; 
             }
-            .dialog-delete-yes img{
-                width:100%;
-                height:100%;
+            .dialog-delete-yes:hover{
+                 background-image: url(images/emial_setting/email_setting29.png) ;
+                background-size: 100% 100%; 
             }
             .dialog-delete-no{
+                 cursor: pointer;
                position: relative; float:left;
                 height:20%;
                 width:20%;
                 top:25%;
-                margin-left:5%;
+                margin-left:15%;
+                 background-image: url(images/emial_setting/email_setting26.png) ;
+               
                 background-size: 100% 100%;
             }
-             .dialog-delete-no img{
-                width:100%;height:100%;
+             
+            .dialog-delete-no:hover{
+                 background-image: url(images/emial_setting/email_setting28.png) ;
+                             background-size: 100% 100%; 
             }
-            
-            
+
          
             ::-webkit-scrollbar {display:none}
 .mail{
@@ -345,6 +379,12 @@
                 
                
             }
+                .div-name{
+                    cursor: pointer;
+                }
+            .square{
+                cursor: pointer;
+            }
             .con{
                 font-size: 16pt;
                  position:relative;
@@ -366,20 +406,19 @@
                 overflow: scroll;
             }
             .mis-word{
-                padding-top:  5%;
+                padding-top:  3%;
                 font-size: 15pt;
             }
             .mis_content{
+                 cursor: pointer;
                  position:relative;
                 top:3%;
                 width:95%;
-             
                 margin-right: 2.5%;
                 height:30%;
-              
                padding-left: 2.5%;
                 padding-right: 2.5%;
-                 background-image: url(emial_setting/email_setting22.png);
+                 background-image: url(images/emial_setting/email_setting22.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
            }
@@ -391,10 +430,16 @@
                 width:23%;
                 height:10%;
                 
-               background-image: url(emial_setting/email_setting18.png);
+               background-image: url(images/emial_setting/email_setting18.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
               margin-right: 20%;
+                cursor: pointer;
+            }
+            .del:hover{
+                background-image: url(images/emial_setting/email_setting20.png);
+               background-size: 100% 100%;
+                background-repeat: no-repeat; 
             }
             .clo{
                   position:relative;
@@ -402,15 +447,17 @@
                   float:left;
                     width:23%;
                 height:10%;;
-                background-image: url(emial_setting/email_setting19.png);
+                background-image: url(images/emial_setting/email_setting19.png);
                background-size: 100% 100%;
                 background-repeat: no-repeat; 
-              
+              cursor: pointer;
             }
-           
-            .accept{
-                height:40px;
-            } 
+            .clo:hover{
+                background-image: url(images/emial_setting/email_setting21.png);
+               background-size: 100% 100%;
+                background-repeat: no-repeat; 
+            }
+            
             :root {
         --view :48%;
         }

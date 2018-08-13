@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		
+        <link rel="stylesheet" href="background0002.css" type="text/css">
+        <link rel="stylesheet" href="template.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <style>
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+            .contact-div-main{
+                 font-size: 12pt;
+                 font-family:Microsoft JhengHei;
+                color: white;
+                position: relative;
+                top:7%;
+            }
+            #commit{
+                width:100%;
+                height:30%;
+                font-size: 16pt;
+                 font-family:Microsoft JhengHei;
+            }
+            .ui-input-text{
+                position: relative;
+                left:14%;
+                text-align: center;
+            }
+            .ui-btn{
+                width:16%;
+                 background-image: url(images/logout/contact-02.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height:2%;
+                position: relative;
+                left:40%;
+                cursor: 
+            }
+            .ui-btn:hover{
+                 background-image: url(images/logout/contact-03.png);
+                  background-size: 100% 100%;
+                background-repeat: no-repeat;
+                border: 0px;
+            }
+            .ui-page-theme-a .ui-btn{
+                background-color: black;
+                border: 0px;
+            }
+            .ui-page-theme-a .ui-btn:hover{
+                    border: 0px;
+                 background-color: black;
+            }
+            .contact-div-us{
+                  font-size: 14pt;
+                position: relative;
+                top:25%;
+                width: 100%;
+                text-align: center;
+            }
+             .contact-div-content{
+                 
+                position: relative;
+              
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+		<!--如果要新增PAGE，把底下這個模板再複製一份就好-->
+        <div data-role="page" id="index-page-contact">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_mony">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+                </div>
+            </div>
+            <div  data-role="content" class="content" >
+        <div class="contact-div-main">
+            <p class="contact-div-us">聯絡我們
+            <br>
+                <br>
+            請於以下意見輸入您的意見or回饋</p>
+            <form>
+            <input type="text" id="commit">
+            <input type="submit" id="btn-submit" >
+             </form>
+            <br>
+            <p class="contact-div-content">對於遊戲體驗有更好的意見或問題<br>歡迎與我們互動。<br>為玩家打造更好的Mochi世界體驗<br>謝謝您的支持與愛護!
+            <br><br>Mochi開發者團隊</p>
+                </div>
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+        
+		<script src="bar_style.js" type="text/javascript"></script>
+		

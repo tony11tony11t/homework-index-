@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
 		<link rel="stylesheet" href="bar_style.css" type="text/css">
-		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+		<link rel="stylesheet" href="background0002.css" type="text/css">
         <link rel="stylesheet" href="template-final.css" type="text/css">
       
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -207,17 +207,16 @@
              
                        <p class="dialog-title">接收任務 </p>
      <p class="dialog-content">您將會有6小時將指定挑戰求任務完成!逾時將會被扣除6點愛心</p>
-     <div class="dialog-btn-yes"><a href="#index-page-3" data-ajax="false">
-         <img src="emial_setting/email_setting27.png" ></a></div>
-    <div class="dialog-btn-no"style=""><a href="#index-page-3" data-ajax="false"><img src="emial_setting/email_setting26.png" ></a></div>
+     <div class="dialog-btn-yes"onclick="location.href='#index-page-2';"></div>
+    <div class="dialog-btn-no"onclick="location.href='#index-page-3';"></div>
                     </div>  
                  <div class="mission-delete-dialog">
                             <p class="dialog-title">刪除任務 </p>
      <p class="dialog-content">刪除任務將會被扣除6點愛心!您確定要刪除嗎?
                      </p>
-     <div class="dialog-delete-yes"><a href="#index-page-index" data-ajax="false">
-         <img src="emial_setting/email_setting27.png" ></a></div>
-    <div class="dialog-delete-no"style=""><a href="#index-page-3" data-ajax="false"><img src="emial_setting/email_setting26.png" ></a></div>
+     <div class="dialog-delete-yes"onclick="location.href='#index-page-index';">
+        </div>
+    <div class="dialog-delete-no"onclick="location.href='#index-page-3';"></div>
                     </div>  
                 </div>
                   
@@ -253,15 +252,27 @@
 					$(".mission-content-dialog").css({display:"none"});
 					
 				})
-        
          $(".mis_content").on("click",function(){
 					$(".mission-content-dialog").css({display:"block"});
+					
+				})
+        $(".clo").on("click",function(){
+					$(".mission-content-dialog").css({display:"none"});
+					
+				})
+          $(".clo").on("click",function(){
+					$(".mission-delete-dialog").css({display:"none"});
+					
+				})
+        $(".del").on("click",function(){
+					$(".mission-content-dialog").css({display:"none"});
 					
 				})
          $(".del").on("click",function(){
 					$(".mission-delete-dialog").css({display:"block"});
 					
 				})
+       
         $(".dialog-delete-no").on("click",function(){
 					$(".mission-delete-dialog").css({display:"none"});
 					
