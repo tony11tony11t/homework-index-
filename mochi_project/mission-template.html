@@ -1,0 +1,1335 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" type="text/css">
+		<link rel="stylesheet" href="bar_style.css" type="text/css">
+		<link rel="stylesheet" href="images/index/background_001/background001.css" type="text/css">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery.min.js"  type="text/javascript"></script>  
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <style>
+			*{
+                margin: 0px;
+                padding: 0px;
+                font-family: "微軟正黑體","Arial";
+                
+				background-color: transparent;
+            }
+			.content{
+				height: 73%;
+			}
+            .index-div-content{
+                position: relative;
+				height: 100%;
+            } 
+            .header{
+                border: 0px;
+                height: 11%;
+            }
+            .footer{
+                border: 0px;
+                height: 16%;
+            }
+            .ui-content{
+                padding: 0px;
+                overflow: hidden;
+            }
+           
+			.index-img-mochi{
+				position: fixed;
+				top:50%;
+				left:30%;
+				height: 30%;
+			}
+			#templatepage{
+				position: relative;
+				background-color: #232323;
+			}
+			.templatecontent{
+				height: 100%;
+				position: relative;
+			}
+
+			 .mission-img-esc img{
+                position: relative;
+
+                width: 10%;
+                left: 88%;
+                
+            }
+
+            .mission-p-release_mission {
+                position: relative;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px 20px 0px 20px;
+                font-size: 20pt;
+                color: white;
+                width: 35%;
+                left: 28%;
+                top: -5%;
+            }
+
+			.mission-p-title{
+                position: relative;
+                text-align: center;
+                font-size: 18pt;
+                
+                left: 26%;
+                top: -3%;
+                color: white;
+                font-weight: normal;
+            }
+
+            .mission-img-missionball img{
+                position: relative;
+                width: 100%;
+                left: 82%;
+                margin-bottom: 5%;
+            }
+
+            .mission-p-step{
+                position: relative;
+                text-align: center;
+                font-size: 16pt;
+                color: white;
+            }
+
+            .mission-btn-type{
+                position: relative;
+                float: left;
+                width: 100%;
+                margin-top: 2%;
+                
+            }
+
+            .mission-btn-type1{
+                position: relative;
+                width: 30%;
+                float: left;
+                left: 17%;
+                top: -1px;
+            }
+            .mission-btn-type2{
+                position: relative;
+                width: 30%;
+                float: right;
+                right: 17%;
+            }
+
+            .mission-btn-step{
+                position: relative;
+                float: left;
+                width: 100%;
+                
+
+            }
+            
+
+
+            .mission-btn-pre{
+                position: relative;
+                width: 30%;
+                float: left;
+                left: 17%;
+            }
+
+            .mission-btn-next{
+                position: relative;
+                width: 30%;
+                float: right;
+                right: 17%;
+            }
+
+            .mission-btn-determine{
+                position: relative;
+                text-align: center;
+            }
+
+
+            #mission-popup-esc{
+                position: relative;
+            }
+
+            
+            .content000{
+                position: relative;
+                z-index: 200;
+                display: block;
+            }
+
+            .content003{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content003-2{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content004-2{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content005-2{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content004{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content005{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content009{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+
+            .content011{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content012-2{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content014-2{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content012{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+            .content014{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content015{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+            .content019{
+                position: relative;
+                z-index: 100;
+                display: none;
+            }
+
+
+
+            .mission-input-missiontext{
+                position: relative;
+                width: 80%;
+                height: 10%;
+                left: 10%;
+                margin-top: 5%;
+                
+            }
+
+            .mission-list-time img{
+                position: relative;
+
+            }
+
+            .mission-popup-determine {
+                position: relative;
+                text-align: center;
+                top: 50%;
+
+            }
+
+
+            .mission-popup-send{
+                position: relative;
+                float: right;
+                right: 15%;
+                top: 70%;
+
+            }
+            .mission-popup-cancel{
+                position: relative;
+                float: left;                
+                left: 15%;
+                top: 70%;
+            }
+            .mission-p-release_mission{
+                height: 10%;
+                width: 35%;
+            }
+            
+            .mission-p-title{
+                width: 50%;
+            }
+
+            .mission-img-missionball{
+                width: 40%;
+            }
+                
+            .mission-btn-type1{
+                width: 30%;
+            }  
+
+            .mission-btn-type2{
+                width: 30%;
+            }   
+                
+            .mission-list-time img{
+                position: relative;
+                width: 25%;
+                left: 13%;
+            }
+
+            .mission-list-time{
+                width: 100%;
+            }
+                
+           
+                
+            .content004 .mission-input-missiontext input{
+                position: relative;
+                width: 80%;
+                left: 10%;
+            }
+        </style>
+    </head>
+    <body>
+			<!--如果要新增PAGE，把底下這個模板再複製一份就好-->
+        <div data-role="page" id="templatepage">
+           <div  data-role="header" data-position="fixed" data-id="header" class="header" data-theme="f">
+                <div class="bar-div-header">
+                    <div class="bar-div-left">
+                        <img src="images/bar_icon/heart01.png" class="bar-img-heart">
+                        <div class="bar-img-heart_number"><span class="bar-span-game_money">9999</span></div>
+                    </div>
+                    <div class="bar-div-name"><span class="bar-span-game_name">MMMMMMM</span></div>
+                    <div class="bar-div-right">
+                        <img src="images/bar_icon/main%20(4).png" class="bar-img-email">
+                        <img src="images/bar_icon/main%20(5).png" class="bar-img-setting">
+                    </div>
+					
+                </div>
+			  
+            </div>
+            <div  data-role="content" class="content" >   	
+					
+            	<div class="content000">
+                    <div class="index-div-content">
+					<div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-01.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.1 請選擇任務類型</p>
+                        </div>         
+                       <div class="mission-btn-type">
+                           <img src="images/mission/release-mission/missionA-06.png" class="mission-btn-type1">                           
+                           <img src="images/mission/release-mission/missionA-07.png" class="mission-btn-type2">                           
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+
+                       </div>
+
+				</div>
+
+				<div class="content003" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.2 請選擇任務對象</p>
+                        </div>         
+                       <div class="mission-btn-type">
+                           <img src="images/mission/release-mission/missionA-32.png" class="mission-btn-type1">                           
+                           <img src="images/mission/release-mission/missionA-35.png" class="mission-btn-type2">                           
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                     </div>
+                     </div>
+
+                     <div class="content003-2" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.3 請選擇指定對象</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <img src="">                     
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                      </div>
+                      </div>
+
+
+                      <div class="content004-2" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.4 請編寫任務內容</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <form>
+                                   <input type="text" name="text" >
+                               </form>                       
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+                       <div class="content005-2" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.5 請設定任務執行時間</p>
+                        </div>         
+                       <div class="mission-list-time">
+                               <img src="images/mission/release-mission/時間按鈕切圖-01.png" class="mission-btn-3hours"> 
+                               <img src="images/mission/release-mission/時間按鈕切圖-02.png" class="mission-btn-6hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-03.png" class="mission-btn-9hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-04.png" class="mission-btn-12hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-05.png" class="mission-btn-15hours">
+                               
+                               <img src="images/mission/release-mission/時間按鈕切圖-07.png" class="mission-btn-24hours">                     
+                               
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href="#mission-popup-assignfinal" data-rel="popup"><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       <div data-role="popup" id="mission-popup-assignfinal" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-26.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-send"><a href=""><img src="images/mission/release-mission/missionA-28.png"></a></div>
+                            <div class="mission-popup-cancel"><a href=""><img src="images/mission/release-mission/missionA-29.png"></a></div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="content004" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.3 請編寫任務內容</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <form>
+                                   <input type="text" name="text" >
+                               </form>                       
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+
+
+                       <div class="content005" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.4 請設定任務執行時間</p>
+                        </div>         
+                       <div class="mission-list-time">
+                               <img src="images/mission/release-mission/時間按鈕切圖-01.png" class="mission-btn-3hours"> 
+                               <img src="images/mission/release-mission/時間按鈕切圖-02.png" class="mission-btn-6hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-03.png" class="mission-btn-9hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-04.png" class="mission-btn-12hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-05.png" class="mission-btn-15hours">
+                               
+                               <img src="images/mission/release-mission/時間按鈕切圖-07.png" class="mission-btn-24hours">                     
+                               
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href="#mission-popup-randomfinal" data-rel="popup"><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       <div data-role="popup" id="mission-popup-randomfinal" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-25.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-send"><a href=""><img src="images/mission/release-mission/missionA-28.png"></a></div>
+                            <div class="mission-popup-cancel"><a href=""><img src="images/mission/release-mission/missionA-29.png"></a></div>
+                        </div>
+                        </div>
+                        </div>
+
+
+                        <div class="content009" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-02.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>任務扭蛋製作完成了囉!</p>
+                            <p>任務進度詳情請至任務列表查看</p>
+                        </div>         
+                       
+
+                       <div class="mission-btn-determine">
+                          <a href=""><img src="images/mission/release-mission/missionA-14.png"></a>
+                       </div>
+                       </div>
+                       </div>
+
+
+                       <div class="content011" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.2 請選擇任務對象</p>
+                        </div>         
+                       <div class="mission-btn-type">
+                           <img src="images/mission/release-mission/missionA-32.png" class="mission-btn-type1">                           
+                           <img src="images/mission/release-mission/missionA-35.png" class="mission-btn-type2">                           
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+
+                       <div class="content012-2" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.3 請編寫任務內容</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <form>
+                                   <input type="text" name="text" >
+                               </form>                       
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+
+                       <div class="content014-2" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.4 請設定任務執行時間</p>
+                        </div>         
+                       <div class="mission-list-time">
+                               <img src="images/mission/release-mission/時間按鈕切圖-01.png" class="mission-btn-3hours"> 
+                               <img src="images/mission/release-mission/時間按鈕切圖-02.png" class="mission-btn-6hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-03.png" class="mission-btn-9hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-04.png" class="mission-btn-12hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-05.png" class="mission-btn-15hours">
+                               
+                               <img src="images/mission/release-mission/時間按鈕切圖-07.png" class="mission-btn-24hours">                     
+                               
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href="#mission-popup-randomfinal" data-rel="popup"><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       <div data-role="popup" id="mission-popup-randomfinal" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-25.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-send"><a href=""><img src="images/mission/release-mission/missionA-28.png"></a></div>
+                            <div class="mission-popup-cancel"><a href=""><img src="images/mission/release-mission/missionA-29.png"></a></div>
+                        </div>
+                        </div>
+                        </div>
+
+                         <div class="content012" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.3 請選擇指定對象</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <img src="">                     
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+
+                       <div class="content014" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.4 請編寫任務內容</p>
+                        </div>         
+                       <div class="mission-input-missiontext">
+                               <form>
+                                   <input type="text" name="text" >
+                               </form>                       
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href=""><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       </div>
+                       </div>
+
+
+                        <div class="content015" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>Step.5 請設定任務執行時間</p>
+                        </div>         
+                       <div class="mission-list-time">
+                               <img src="images/mission/release-mission/時間按鈕切圖-01.png" class="mission-btn-3hours"> 
+                               <img src="images/mission/release-mission/時間按鈕切圖-02.png" class="mission-btn-6hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-03.png" class="mission-btn-9hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-04.png" class="mission-btn-12hours">
+                               <img src="images/mission/release-mission/時間按鈕切圖-05.png" class="mission-btn-15hours">
+                               
+                               <img src="images/mission/release-mission/時間按鈕切圖-07.png" class="mission-btn-24hours">                     
+                               
+                       </div>
+
+                       <div class="mission-btn-step">
+                           <a href=""><img src="images/mission/release-mission/missionA-10.png" class="mission-btn-pre"></a>                           
+                           <a href="#mission-popup-assignfinal" data-rel="popup"><img src="images/mission/release-mission/missionA-11.png" class="mission-btn-next"></a>
+                       </div>
+                       <div data-role="popup" id="mission-popup-assignfinal" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-26.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-send"><a href=""><img src="images/mission/release-mission/missionA-28.png"></a></div>
+                            <div class="mission-popup-cancel"><a href=""><img src="images/mission/release-mission/missionA-29.png"></a></div>
+                        </div>
+                        </div>
+
+
+                        </div>
+
+                         <div class="content019" >
+                <div class="index-div-content">
+                    
+                        <div class="mission-img-esc" ><a href="#mission-popup-esc" data-rel="popup"><img src="images/mission/release-mission/missionA-05.png"></a></div>
+
+                        <div data-role="popup" id="mission-popup-esc" class="ui-content"  style="background-image: url(images/mission/release-mission/missionA-27.png); background-size: 100% 100%; background-color: #ffce00 ">
+                            <div class="mission-popup-determine"><a href=""><img src="images/mission/release-mission/missionA-14.png"></a></div>
+                        </div>
+
+
+
+                       
+                        <div class="mission-p-release_mission">
+                            <p>發布任務</p>
+                        </div>     
+                        <div class="mission-p-title">
+                            <p>-製作任務球-</p>
+                        </div>   
+                        <div class="mission-img-missionball">
+                            <img src="images/mission/release-mission/missionA-03.png">
+                        </div> 
+                        <div class="mission-p-step">
+                            <p>任務扭蛋製作完成了囉!</p>
+                            <p>任務進度詳情請至任務列表查看</p>
+                        </div>         
+                       
+
+                       <div class="mission-btn-determine">
+                          <a href=""><img src="images/mission/release-mission/missionA-14.png"></a>
+                       </div>
+                       </div>
+                       </div>
+
+
+	
+					<div class="bar-div-second_bar" >
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/addmission.png" class="bar-img-second_bar_item"><p>新增任務</p></div>
+						<div class="bar-div-second_bar_item second_bar_item_mission"><img src="images/bar_icon/missionlist.png" class="bar-img-second_bar_item"><p>任務列表</p></div> 
+
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/friend.png" class="bar-img-second_bar_item"><p>好友名單</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/collection.png" class="bar-img-second_bar_item"><p>我的收藏</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/question.png" class="bar-img-second_bar_item"><p>遊戲指引</p></div> 
+						<div class="bar-div-second_bar_item second_bar_item_other"><img src="images/bar_icon/contact.png" class="bar-img-second_bar_item"><p>聯絡我們</p></div>   
+					</div>
+            </div>
+            <div  data-role="footer" data-position="fixed" data-id="footer" class="footer">
+                <div class="bar-div-footer">
+                    <div class="bar-div-bar_item" data-item="mochi"><img src="images/bar_icon/mochi.png" class="bar-img-bar_item"><p>Mochi</p></div>
+                    <div class="bar-div-bar_item" data-item="mission"><img src="images/bar_icon/mission.png" class="bar-img-bar_item"><p>任務</p></div>
+                    <div class="bar-div-bar_home" data-item="home"><img src="images/bar_icon/home.png" class="bar-img-bar_home"></div>
+                    <div class="bar-div-bar_item" data-item="store"><img src="images/bar_icon/store.png" class="bar-img-bar_item"><p>商店</p></div>
+                    <div class="bar-div-bar_item" data-item="other"><img src="images/bar_icon/else.png" class="bar-img-bar_item"><p>其他</p></div>
+                </div>
+            </div>
+        </div>
+		
+		
+		
+		
+        
+		<script src="mochi_function.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				window.localStorage.setItem('username',"111");
+				//second_bar_animation
+                var SecondBar_value={
+					IsSecondBarVisible:false,
+					SecondBarIsWhat:null
+				};
+                $(".bar-div-bar_item").on("click",SecondBar_value,animate_bar);
+				//---------END
+				
+				
+				function AdjustmentSize(){
+				var window_height=$(window).height();
+                
+                var index_div_header_height=$(".index-div-header").height();
+                var index_div_header_width=$(".index-div-header").width();
+               
+                
+                var index_div_footer_height=$(".index-div-footer").height();
+                var index_div_footer_width=$(".index-div-footer").width();
+                
+               
+                
+                var index_div_content_width=$(".index-div-content").width();
+                var index_div_content_height=window_height-index_div_header_height-index_div_footer_height;
+                
+                
+					
+					
+				$(".index-img-mochi").attr("height",index_div_content_height*0.4);
+
+                 $("#mission-popup-esc").css("width",index_div_content_width*0.9);
+                $("#mission-popup-esc").css("height",index_div_content_height*0.3);
+
+                
+                $("#mission-popup-esc").css("top",index_div_content_height*0.3);
+
+                $(".mission-popup-determine img").css("width",index_div_content_width*0.3);
+
+                $(".mission-popup-determine img").css("height",index_div_content_height*0.15);
+                
+                $("#mission-popup-randomfinal").css("width",index_div_content_width*0.9);
+                $("#mission-popup-randomfinal").css("height",index_div_content_height*0.5);
+
+                $("#mission-popup-randomfinal").css("left",index_div_content_height*0.01);
+                $("#mission-popup-randomfinal").css("top",-index_div_content_height*0.4);
+
+                $("#mission-popup-assignfinal").css("width",index_div_content_width*0.9);
+                $("#mission-popup-assignfinal").css("height",index_div_content_height*0.5);
+
+                $("#mission-popup-assignfinal").css("left",index_div_content_height*0.01);
+                $("#mission-popup-assignfinal").css("top",-index_div_content_height*0.4);
+
+
+                $(".mission-popup-cancel img").css("width",index_div_content_width*0.3);
+
+                $(".mission-popup-cancel img").css("height",index_div_content_height*0.15);
+
+                $(".mission-popup-send img").css("width",index_div_content_width*0.3);
+
+                $(".mission-popup-send img").css("height",index_div_content_height*0.15);
+
+				}	
+
+
+
+
+                
+
+
+
+
+                //依據視窗調整所有元件大小
+				
+               
+                AdjustmentSize();
+
+
+
+                var ConfuseBtnIsclicked ;
+                var ChallengeBtnIsclicked;
+                
+
+                var RandomBtnIsclicked;
+                var AssignBtnIsclicked;
+
+                
+                    $(".content000 .mission-btn-type1").on("tap",function(){
+                        
+                      $(".content000 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-08.png");
+                      $(".content000 .mission-img-missionball img").attr("src","images/mission/release-mission/missionA-03.png");
+                      $(".content000 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-07.png");
+                      ConfuseBtnIsclicked = true;
+                      ChallengeBtnIsclicked =false;
+                    });
+
+                    $(".content000 .mission-btn-type2").on("tap",function(){
+                      $(".content000 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-09.png");
+                      $(".content000 .mission-img-missionball img").attr("src","images/mission/release-mission/missionA-02.png");
+                      $(".content000 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-06.png");
+                      ConfuseBtnIsclicked = false;
+                      ChallengeBtnIsclicked =true;
+                    });
+
+
+                    $(".content003 .mission-btn-type1").on("tap",function(){
+                        
+                      $(".content003 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-33.png");
+                      
+                      $(".content003 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-35.png");
+                      RandomBtnIsclicked = true;
+                      AssignBtnIsclicked =false;
+                    });
+
+                    $(".content003 .mission-btn-type2").on("tap",function(){
+                      $(".content003 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-36.png");
+                      
+                      $(".content003 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-32.png");
+                      RandomBtnIsclicked = false;
+                      AssignBtnIsclicked =true;
+                    });
+
+
+                    $(".content011 .mission-btn-type1").on("tap",function(){
+                        
+                      $(".content011 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-33.png");
+                      
+                      $(".content011 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-35.png");
+                      RandomBtnIsclicked = true;
+                      AssignBtnIsclicked =false;
+                    });
+
+                    $(".content011 .mission-btn-type2").on("tap",function(){
+                      $(".content011 .mission-btn-type2").attr("src","images/mission/release-mission/missionA-36.png");
+                      
+                      $(".content011 .mission-btn-type1").attr("src","images/mission/release-mission/missionA-32.png");
+                      RandomBtnIsclicked = false;
+                      AssignBtnIsclicked =true;
+                    });
+                 
+                    $(".mission-popup-send img").on("tap",function(){
+                      $(".mission-popup-send img").attr("src","images/mission/release-mission/missionA-31.png");
+                      
+                      $(".mission-popup-cancel img").attr("src","images/mission/release-mission/missionA-29.png");                     
+                    });
+                    $(".mission-popup-cancel img").on("tap",function(){
+                      $(".mission-popup-cancel img").attr("src","images/mission/release-mission/missionA-30.png");
+                      
+                      $(".mission-popup-send img").attr("src","images/mission/release-mission/missionA-28.png");                     
+                    });
+
+
+
+
+
+
+
+            $(" .mission-btn-3hours").on("tap",function(){
+                                  $(" .mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-08.png");
+
+
+                                  $(" .mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-02.png");
+                                  $(" .mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-03.png");
+                                  $(" .mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-04.png");
+                                  $(" .mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-05.png");
+                                  $(" .mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-07.png");
+                                  
+                    });
+            $(".mission-btn-6hours").on("tap",function(){
+                                  $(" .mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-09.png");
+
+
+                                  $(" .mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-01.png");
+                                  $(" .mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-03.png");
+                                  $(" .mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-04.png");
+                                  $(".mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-05.png");
+                                  $(".mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-07.png");
+                                  
+                    });
+            $(".mission-btn-9hours").on("tap",function(){
+                                  $(" .mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-10.png");
+
+
+                                  $(" .mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-02.png");
+                                  $(" .mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-01.png");
+                                  $(" .mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-04.png");
+                                  $(".mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-05.png");
+                                  $(" .mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-07.png");
+                                  
+                    });
+
+            $(".mission-btn-12hours").on("tap",function(){
+                                  $(".mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-11.png");
+
+
+                                  $(".mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-02.png");
+                                  $(".mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-01.png");
+                                  $(".mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-03.png");
+                                  $(" .mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-05.png");
+                                  $(" .mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-07.png");
+                                  
+                    });
+            $(" .mission-btn-15hours").on("tap",function(){
+                                  $(".mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-12.png");
+
+
+                                  $(".mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-02.png");
+                                  $(".mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-01.png");
+                                  $(" .mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-03.png");
+                                  $(".mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-04.png");
+                                  $(".mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-07.png");
+                                  
+                    });
+            $(".mission-btn-24hours").on("tap",function(){
+                                  $(".mission-btn-24hours").attr("src","images/mission/release-mission/時間按鈕切圖-14.png");
+
+
+                                  $(".mission-btn-6hours").attr("src","images/mission/release-mission/時間按鈕切圖-02.png");
+                                  $(".mission-btn-3hours").attr("src","images/mission/release-mission/時間按鈕切圖-01.png");
+                                  $(".mission-btn-9hours").attr("src","images/mission/release-mission/時間按鈕切圖-03.png");
+                                  $(".mission-btn-12hours").attr("src","images/mission/release-mission/時間按鈕切圖-04.png");
+                                  $(".mission-btn-15hours").attr("src","images/mission/release-mission/時間按鈕切圖-05.png");
+                                  
+                    });
+
+
+
+                $(".mission-btn-pre").hover(function(){
+                  $(".mission-btn-pre").attr("src","images/mission/release-mission/missionA-12.png");},function(){
+                   $(".mission-btn-pre").attr("src","images/mission/release-mission/missionA-10.png");
+                });
+                $(".mission-btn-next").hover(function(){
+                  $(".mission-btn-next").attr("src","images/mission/release-mission/missionA-13.png");},function(){
+                   $(".mission-btn-next").attr("src","images/mission/release-mission/missionA-11.png");
+                  
+                });
+
+
+
+                
+
+
+                
+                    $(".content000 .mission-btn-next").on("click",function(){
+                        if (ConfuseBtnIsclicked == true) {
+                      $(".content000").css("display","none"); 
+                      $(".content011").css({display: "inline-block"}); 
+                       }                
+                    });
+
+                    $(".content000 .mission-btn-next").on("click",function(){
+                        if (ChallengeBtnIsclicked == true) {
+                      $(".content000").css("display","none"); 
+                      $(".content003").css({display: "inline-block"}); 
+                       }                
+                    });
+
+                
+                $(".content003 .mission-btn-pre").on("click",function(){
+                  $(".content000").css("display","inline-block"); 
+                  $(".content003").css({display: "none"});                  
+                });
+
+
+                     $(".content003 .mission-btn-next").on("click",function(){
+                        if (RandomBtnIsclicked == true) {
+                  $(".content004").css("display","inline-block"); 
+                  $(".content003").css({display: "none"});   
+                  }  
+                  else if (AssignBtnIsclicked ==true) {
+                    $(".content003-2").css("display","inline-block"); 
+                  $(".content003").css({display: "none"});  
+                  }             
+                });
+
+                $(".content004 .mission-btn-pre").on("click",function(){
+                  $(".content003").css("display","inline-block"); 
+                  $(".content004").css({display: "none"});                  
+                });
+
+
+                     $(".content004 .mission-btn-next").on("click",function(){
+                  $(".content005").css("display","inline-block"); 
+                  $(".content004").css({display: "none"});                  
+                });
+
+                     $(".content003-2 .mission-btn-pre").on("click",function(){
+                  $(".content003").css("display","inline-block"); 
+                  $(".content003-2").css({display: "none"});                  
+                });
+
+
+                     $(".content003-2 .mission-btn-next").on("click",function(){
+                  $(".content004-2").css("display","inline-block"); 
+                  $(".content003-2").css({display: "none"});                  
+                });
+
+                     $(".content004-2 .mission-btn-pre").on("click",function(){
+                  $(".content003-2").css("display","inline-block"); 
+                  $(".content004-2").css({display: "none"});                  
+                });
+
+
+                     $(".content004-2 .mission-btn-next").on("click",function(){
+                  $(".content005-2").css("display","inline-block"); 
+                  $(".content004-2").css({display: "none"});                  
+                });
+
+                      
+
+                     $(".content005 .mission-btn-pre").on("click",function(){
+                  $(".content004").css("display","inline-block"); 
+                  $(".content005").css({display: "none"});                  
+                });
+                     $(".content005-2 .mission-btn-pre").on("click",function(){
+                  $(".content004-2").css("display","inline-block"); 
+                  $(".content005-2").css({display: "none"});                  
+                });
+
+
+                     $(".content011 .mission-btn-next").on("click",function(){
+                        if ( AssignBtnIsclicked== true) {
+                  $(".content012").css("display","inline-block"); 
+                  $(".content011").css({display: "none"});   
+                  }else if (RandomBtnIsclicked == true) {
+                    $(".content012-2").css("display","inline-block"); 
+                  $(".content011").css({display: "none"});  
+                  }         
+                });
+
+                     $(".content011 .mission-btn-pre").on("click",function(){
+                  $(".content000").css("display","inline-block"); 
+                  $(".content011").css({display: "none"});                  
+                });
+
+                     $(".content012 .mission-btn-next").on("click",function(){
+                        
+                  $(".content014").css("display","inline-block"); 
+                  $(".content012").css({display: "none"}); 
+
+                });
+
+                     $(".content012 .mission-btn-pre").on("click",function(){
+                  $(".content011").css("display","inline-block"); 
+                  $(".content012").css({display: "none"});                  
+                });
+
+                     $(".content014 .mission-btn-next").on("click",function(){
+                  $(".content015").css("display","inline-block"); 
+                  $(".content014").css({display: "none"});                  
+                });
+
+                     $(".content014 .mission-btn-pre").on("click",function(){
+                  $(".content012").css("display","inline-block"); 
+                  $(".content014").css({display: "none"});                  
+                });
+
+                     $(".content012-2 .mission-btn-next").on("click",function(){
+                        
+                  $(".content014-2").css("display","inline-block"); 
+                  $(".content012-2").css({display: "none"}); 
+
+                });
+
+                     $(".content012-2 .mission-btn-pre").on("click",function(){
+                  $(".content011").css("display","inline-block"); 
+                  $(".content012-2").css({display: "none"});                  
+                });
+                     
+
+                     $(".content014-2 .mission-btn-pre").on("click",function(){
+                  $(".content012-2").css("display","inline-block"); 
+                  $(".content014-2").css({display: "none"});                  
+                });
+
+                     
+
+                     $(".content015 .mission-btn-pre").on("click",function(){
+                  $(".content014").css("display","inline-block"); 
+                  $(".content015").css({display: "none"});                  
+                });
+	
+			});
+			
+			
+		</script>
+		
+    </body>
+</html>
